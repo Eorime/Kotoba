@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { fetchData } from "../../api";
-import { Container } from "./style";
+import { AllContainer, AllKanjij, Container, Kanji } from "./style";
 import { PuffLoader } from "react-spinners";
 import { Spinner } from "../../GlobalStyle";
 
@@ -23,7 +23,13 @@ const AllKanji = () => {
     };
 
     fetchAll();
+  }, []);
+
+  useEffect(() => {
+    console.log(kanjiData);
   }, [kanjiData]);
+
+  const sliced = kanjiData.slice(0, 20);
 
   return (
     <Container>
@@ -32,7 +38,11 @@ const AllKanji = () => {
           <PuffLoader />
         </Spinner>
       ) : (
-        kanjiData.map((kanji, index) => <div key={index}>{kanji.kanji}</div>)
+        <AllContainer>
+          {sliced.map((kanji, index) => (
+            <Kanji key={index}>{kanji}</Kanji>
+          ))}
+        </AllContainer>
       )}
     </Container>
   );
