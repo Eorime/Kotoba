@@ -5,12 +5,11 @@ export const Container = styled.div``;
 export const AllContainer = styled.div`
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
   font-size: 20px;
 `;
 
 export const Kanji = styled.div`
-  margin-right: 5px;
+  margin-right: 10px;
 
   &:hover {
     cursor: pointer;

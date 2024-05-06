@@ -29,18 +29,25 @@ const AllKanji = () => {
     console.log(kanjiData);
   }, [kanjiData]);
 
-  const sliced = kanjiData.slice(0, 20);
+  const sliced = kanjiData.slice(0, 80);
+  const rowSize = 10;
+  const kanjiRow = Array.from(
+    { length: Math.ceil(sliced.length / rowSize) },
+    (_, index) => sliced.slice(index * rowSize, index * rowSize + rowSize)
+  );
 
   return (
     <Container>
       {loading ? (
         <Spinner color={"#ef1548"} size={100} />
       ) : (
-        <AllContainer>
-          {sliced.map((kanji, index) => (
-            <Kanji key={index}>{kanji}</Kanji>
-          ))}
-        </AllContainer>
+        kanjiRow.map((row, rowIndex) => (
+          <AllContainer key={rowIndex}>
+            {row.map((kanji, index) => (
+              <Kanji key={index}>{kanji}</Kanji>
+            ))}
+          </AllContainer>
+        ))
       )}
     </Container>
   );
