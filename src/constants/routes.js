@@ -2,7 +2,7 @@ const home = "/";
 const seeKanji = "/seekanji";
 const kanjiDetails = "/kanjidetails";
 const allKanji = "/allkanji";
-const gradeKanji = "/seeKanji/:gradeID";
+const gradeKanji = "/seegrade/:gradeID";
 
 export const routes = {
   home,

@@ -5,17 +5,12 @@ import { useNavigate } from "react-router-dom";
 import { routes } from "../../constants/routes";
 
 const SeeKanji = () => {
-  const [gradeKanjiData, setGradeKanjiData] = useState([]);
-  const [error, setError] = useState("");
-  const [loading, setLoading] = useState(true);
-  const { gradeID } = useParams();
   const navigate = useNavigate();
-
-  const handleGradeClick = () => {
-    navigate(routes.gradeKanji);
-  };
-
   const buttonArray = [1, 2, 3, 4, 5, 6, 7, 8];
+
+  const handleGradeClick = (grade) => {
+    navigate(routes.gradeKanji.replace("/:gradeID", `/${grade}`));
+  };
 
   return (
     <div>

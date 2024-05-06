@@ -26,7 +26,9 @@ const KanjiPerGrade = () => {
     fetchAll();
   }, [gradeID]);
 
-  return <div></div>;
+  const gradeSliced = gradeKanjiData.slice(0, 20);
+
+  return <div>{gradeSliced}</div>;
 };
 
 export default KanjiPerGrade;
