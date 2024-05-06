@@ -1,9 +1,9 @@
+import { PuffLoader } from "react-spinners";
 import styled from "styled-components";
 
-export const Spinner = styled.div`
-  color: #ef1548;
-  position: fixed;
+export const Spinner = styled(PuffLoader)`
+  position: absolute;
+  margin-top: 25%;
   left: 50%;
-  top: 50%;
   transform: translate(-50%, -50%);
 `;

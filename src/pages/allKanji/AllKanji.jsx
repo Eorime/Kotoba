@@ -34,9 +34,7 @@ const AllKanji = () => {
   return (
     <Container>
       {loading ? (
-        <Spinner>
-          <PuffLoader />
-        </Spinner>
+        <Spinner color={"#ef1548"} size={100} />
       ) : (
         <AllContainer>
           {sliced.map((kanji, index) => (
