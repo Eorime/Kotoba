@@ -1,11 +1,13 @@
 const home = "/";
-const about = "/about";
+const seeKanji = "/seekanji";
 const kanjiDetails = "/kanjidetails";
 const allKanji = "/allkanji";
+const gradeKanji = "/seeKanji/:gradeID";
 
 export const routes = {
   home,
-  about,
+  seeKanji,
   kanjiDetails,
   allKanji,
+  gradeKanji,
 };

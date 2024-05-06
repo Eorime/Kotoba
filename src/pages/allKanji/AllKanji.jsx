@@ -14,7 +14,6 @@ const AllKanji = () => {
       try {
         const response = await fetchData("https://kanjiapi.dev/v1/kanji/all");
         setKanjiData(response);
-        console.log(kanjiData);
       } catch (error) {
         setError(error.message);
       } finally {
