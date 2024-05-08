@@ -3,6 +3,7 @@ import { fetchData } from "../../api";
 import { AllContainer, AllKanjij, Container, Kanji } from "./style";
 import { PuffLoader } from "react-spinners";
 import { Spinner } from "../../GlobalStyle";
+import Navbar from "../../components/navbar/Navbar";
 
 const AllKanji = () => {
   const [kanjiData, setKanjiData] = useState([]);
@@ -37,6 +38,7 @@ const AllKanji = () => {
 
   return (
     <Container>
+      <Navbar />
       {loading ? (
         <Spinner color={"#ef1548"} size={100} />
       ) : (

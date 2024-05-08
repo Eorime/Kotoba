@@ -3,6 +3,7 @@ import { useParams } from "react-router-dom";
 import { fetchData } from "../../api";
 import { useNavigate } from "react-router-dom";
 import { routes } from "../../constants/routes";
+import Navbar from "../../components/navbar/Navbar";
 
 const SeeKanji = () => {
   const navigate = useNavigate();
@@ -14,6 +15,7 @@ const SeeKanji = () => {
 
   return (
     <div>
+      <Navbar />
       {buttonArray.map((grade) => (
         <button key={grade} onClick={() => handleGradeClick(grade)}>
           Grade {grade} Kanji

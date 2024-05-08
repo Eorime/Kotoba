@@ -5,6 +5,7 @@ import Home from "../pages/home/Home";
 import KanjiDetails from "../pages/kanjiDetails/KanjiDetails";
 import KanjiPerGrade from "../pages/kanjiPerGrade/KanjiPerGrade";
 import SeeKanji from "../pages/seeKanji/SeeKanji";
+import About from "../pages/about/About";
 
 export const appRoutes = [
   { path: routes.home, Component: Home },
@@ -25,5 +26,9 @@ export const appRoutes = [
   {
     path: routes.gradeKanji,
     Component: KanjiPerGrade,
+  },
+  {
+    path: routes.about,
+    Component: About,
   },
 ];
