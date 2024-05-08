@@ -19,6 +19,7 @@ export const NavElement = styled.p`
   margin: 20px 70px;
   font-size: 24px;
   transition: color 0.2s;
+  color: rgba(0, 0, 0, 0.8);
 
   &:hover {
     color: #d7717f;
@@ -29,4 +30,5 @@ export const NavLogo = styled.h1`
   font-size: 28px;
   line-height: 25px;
   letter-spacing: 4px;
+  color: rgba(0, 0, 0, 0.8);
 `;

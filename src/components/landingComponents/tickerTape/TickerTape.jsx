@@ -6,11 +6,11 @@ const TickerTape = () => {
     <Container>
       <TickerJapanese>
         いらっしゃいませ いらっしゃいませ いらっしゃいませ いらっしゃいませ
-        いらっしゃいませ
+        いらっしゃいませ いらっしゃいませ
       </TickerJapanese>
       <TickerJapanese>
         いらっしゃいませ いらっしゃいませ いらっしゃいませ いらっしゃいませ
-        いらっしゃいませ
+        いらっしゃいませ いらっしゃいませ
       </TickerJapanese>
       <br></br>
       <TickerEnglish>
