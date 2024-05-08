@@ -13,6 +13,6 @@ export const Kanji = styled.div`
 
   &:hover {
     cursor: pointer;
-    color: #ef1548;
+    color: #d7717f;
   }
 `;

@@ -1,13 +1,7 @@
 import { Link } from "react-router-dom";
 import styled from "styled-components";
 
-export const Container = styled.div`
-  border: 3px solid #ef154885;
-  border-radius: 20px;
-  width: 75%;
-  margin: 150px auto;
-  padding-bottom: 30%;
-`;
+export const Container = styled.div``;
 
 export const NavContainer = styled.div`
   display: flex;
@@ -24,9 +18,10 @@ export const StyledLink = styled(Link)`
 export const NavElement = styled.p`
   margin: 20px 70px;
   font-size: 24px;
+  transition: color 0.2s;
 
   &:hover {
-    color: #ef1548;
+    color: #d7717f;
   }
 `;
 
