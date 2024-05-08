@@ -7,7 +7,7 @@ import Navbar from "../../components/navbar/Navbar";
 
 const SeeKanji = () => {
   const navigate = useNavigate();
-  const buttonArray = [1, 2, 3, 4, 5, 6, 7, 8];
+  const buttonArray = [1, 2, 3, 4, 5, 6];
 
   const handleGradeClick = (grade) => {
     navigate(routes.gradeKanji.replace("/:gradeID", `/${grade}`));

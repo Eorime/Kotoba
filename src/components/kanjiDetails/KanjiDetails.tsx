@@ -1,7 +1,8 @@
 import React from "react";
+import Navbar from "../navbar/Navbar";
 
 const KanjiDetails = () => {
-  return <div>KanjiDetails</div>;
+  return <div></div>;
 };
 
 export default KanjiDetails;

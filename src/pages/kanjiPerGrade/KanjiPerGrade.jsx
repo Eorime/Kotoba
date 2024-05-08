@@ -3,6 +3,8 @@ import { fetchData } from "../../api";
 import { useParams } from "react-router-dom";
 import { Link } from "react-router-dom";
 import { Container, GradeContainer, GradeKanji } from "./style";
+import Navbar from "../../components/navbar/Navbar";
+import SeeKanji from "../seeKanji/SeeKanji";
 
 const KanjiPerGrade = () => {
   const [gradeKanjiData, setGradeKanjiData] = useState([]);
@@ -27,8 +29,8 @@ const KanjiPerGrade = () => {
     fetchAll();
   }, [gradeID]);
 
-  const gradeSliced = gradeKanjiData.slice(0, 100);
-  const gradeRowSize = 10;
+  const gradeSliced = gradeKanjiData.slice(0, 1200);
+  const gradeRowSize = 20;
   const gradeKanjiRow = Array.from(
     { length: Math.ceil(gradeSliced.length / gradeRowSize) },
     (_, index) =>
@@ -40,6 +42,7 @@ const KanjiPerGrade = () => {
 
   return (
     <Container>
+      <SeeKanji />
       {gradeKanjiRow.map((row, index) => (
         <GradeContainer key={index}>
           {row.map((kanji, subIndex) => (

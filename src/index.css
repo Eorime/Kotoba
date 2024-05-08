@@ -9,4 +9,5 @@
 body {
   font-family: "Didact Gothic", sans-serif;
   background-color: #f1e7db;
+  cursor: url("cursor.png");
 }

@@ -9,7 +9,10 @@ export const AllContainer = styled.div`
 `;
 
 export const Kanji = styled.div`
-  margin-right: 10px;
+  margin-right: 20px;
+  font-size: 48px;
+  color: rgba(0, 0, 0, 0.8);
+  transition: ease color 0.2s;
 
   &:hover {
     cursor: pointer;

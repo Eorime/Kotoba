@@ -29,8 +29,8 @@ const AllKanji = () => {
     console.log(kanjiData);
   }, [kanjiData]);
 
-  const sliced = kanjiData.slice(0, 80);
-  const rowSize = 10;
+  const sliced = kanjiData.slice(0, 160);
+  const rowSize = 20;
   const kanjiRow = Array.from(
     { length: Math.ceil(sliced.length / rowSize) },
     (_, index) => sliced.slice(index * rowSize, index * rowSize + rowSize)

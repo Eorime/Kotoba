@@ -9,10 +9,13 @@ export const GradeContainer = styled.div`
 `;
 
 export const GradeKanji = styled.div`
-  margin-right: 10px;
+  margin-right: 20px;
+  font-size: 48px;
+  color: rgba(0, 0, 0, 0.8);
+  transition: ease color 0.2s;
 
   &:hover {
     cursor: pointer;
-    color: #ef1548;
+    color: #d7717f;
   }
 `;
