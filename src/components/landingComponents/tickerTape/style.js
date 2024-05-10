@@ -20,7 +20,7 @@ const tickerScroll = keyframes`
 export const TickerJapanese = styled.h1`
   display: inline-block;
   font-size: 120px;
-  margin-top: 5px;
+  margin-top: 25px;
   margin-bottom: -20px;
   animation: ${tickerScroll} 30s linear infinite;
   animation-fill-mode: both;
