@@ -61,6 +61,7 @@ export const AboutTitle = styled.h6`
 
 export const AboutText = styled.p`
   color: white;
+  position: absolute;
 `;
 
 export const ResourcesTitle = styled.h6`
@@ -73,6 +74,9 @@ export const ResourcesTitle = styled.h6`
 
 export const ResourcesText = styled.p`
   color: white;
+  position: absolute;
+  top: 1200px;
+  right: 380px;
 `;
 
-//ro trialebs wreze egeti warwera fonze da eweros iaponurad kanji by grade (学年別の漢字), kanji, about, すべての漢字, 学ぶためのリソース
+//ro trialebs wreze egeti warwera fonze da eweros iaponurad kanji by grade (学年別の漢字), kanji, about, すべての漢字, 学ぶためのリソース, プロジェクトについて

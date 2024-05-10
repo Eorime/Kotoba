@@ -2,7 +2,7 @@ import React from "react";
 import { HomeContainer, TickerContainer } from "./style";
 import Navbar from "../../components/navbar/Navbar";
 import TickerTape from "../../components/landingComponents/tickerTape/TickerTape";
-import LandingCircle from "../../components/landingComponents/landingInfo/LandingInfo";
+import LandingCircle from "../../components/landingComponents/landingCircle/LandingInfo";
 
 const Home = () => {
   return (
