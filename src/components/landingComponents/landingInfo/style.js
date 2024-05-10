@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import styled from "styled-components";
 
 export const Container = styled.div`
@@ -33,10 +34,20 @@ export const AllGradeTitle = styled.h6`
   position: absolute;
   top: 250px;
   left: 290px;
+  transition: color 0.5s ease;
+
+  &: hover {
+    color: #f36276;
+    cursor: pointer;
+  }
 `;
 
 export const AllGradeText = styled.p`
   color: white;
+  position: absolute;
+  top: 400px;
+  left: 290px;
+  font-size: 26px;
 `;
 
 export const AllKanjiTitle = styled.h6`
@@ -45,10 +56,20 @@ export const AllKanjiTitle = styled.h6`
   position: absolute;
   top: 500px;
   right: 380px;
+  transition: color 0.5s ease;
+
+  &: hover {
+    color: #f36276;
+    cursor: pointer;
+  }
 `;
 
 export const AllKanjiText = styled.p`
   color: white;
+  position: absolute;
+  top: 650px;
+  right: 255px;
+  font-size: 26px;
 `;
 
 export const AboutTitle = styled.h6`
@@ -57,11 +78,20 @@ export const AboutTitle = styled.h6`
   position: absolute;
   top: 850px;
   left: 290px;
+  transition: color 0.5s ease;
+
+  &: hover {
+    color: #f36276;
+    cursor: pointer;
+  }
 `;
 
 export const AboutText = styled.p`
   color: white;
   position: absolute;
+  top: 1000px;
+  left: 290px;
+  font-size: 26px;
 `;
 
 export const ResourcesTitle = styled.h6`
@@ -69,14 +99,21 @@ export const ResourcesTitle = styled.h6`
   font-size: 42px;
   position: absolute;
   top: 1200px;
-  right: 340px;
+  right: 360px;
+  transition: color 0.5s ease;
+
+  &: hover {
+    color: #f36276;
+    cursor: pointer;
+  }
 `;
 
 export const ResourcesText = styled.p`
   color: white;
   position: absolute;
-  top: 1200px;
-  right: 380px;
+  top: 1350px;
+  right: 210px;
+  font-size: 26px;
 `;
 
 export const GradeRotationContainer = styled.div`
@@ -87,7 +124,7 @@ export const GradeRotationContainer = styled.div`
 
 export const AllRotationContainer = styled.div`
   position: absolute;
-  top: 520px;
+  top: 510px;
   right: 440px;
 `;
 
@@ -100,5 +137,10 @@ export const AboutRotationContainer = styled.div`
 export const ResourcesRotationContainer = styled.div`
   position: absolute;
   top: 1210px;
-  right: 430px;
+  right: 450px;
+`;
+
+export const StyledLink = styled(Link)`
+  text-decoration: none;
+  color: inherit;
 `;

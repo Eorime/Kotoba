@@ -15,8 +15,10 @@ import {
   ResourcesRotationContainer,
   ResourcesText,
   ResourcesTitle,
+  StyledLink,
 } from "./style";
 import TextCircle from "../textCircle/TextCircle";
+import { routes } from "../../../constants/routes";
 
 const LandingInfo = () => {
   return (
@@ -25,23 +27,42 @@ const LandingInfo = () => {
         <MainText>
           初<br></br>め<br></br>ま<br></br>し<br></br>て
         </MainText>
-        <AllGradeTitle>Kanji By Grades</AllGradeTitle>
-        <AllGradeText></AllGradeText>
+        <StyledLink to={routes.gradeKanji}>
+          <AllGradeTitle>Kanji By Grades</AllGradeTitle>
+        </StyledLink>
+        <AllGradeText>
+          See all kanji grades and their <br></br> corresponding kanji
+          characters.
+        </AllGradeText>
         <GradeRotationContainer>
           <TextCircle text="学年別の漢字" />
         </GradeRotationContainer>
-        <AllKanjiTitle>All Kanji</AllKanjiTitle>
-        <AllKanjiText></AllKanjiText>
+        <StyledLink to={routes.allKanji}>
+          <AllKanjiTitle>All Kanji</AllKanjiTitle>
+        </StyledLink>
+        <AllKanjiText>
+          View all available 13 000 <br></br>
+          kanji characters.
+        </AllKanjiText>
         <AllRotationContainer>
           <TextCircle text="すべての漢字" />
         </AllRotationContainer>
-        <AboutTitle>About The Project</AboutTitle>
-        <AboutText></AboutText>
+        <StyledLink to={routes.about}>
+          <AboutTitle>About The Project</AboutTitle>
+        </StyledLink>
+        <AboutText>
+          Learn more about the project, <br></br>and why it was created.
+        </AboutText>
         <AboutRotationContainer>
           <TextCircle text="プロジェクトについて" />
         </AboutRotationContainer>
-        <ResourcesTitle>Resources</ResourcesTitle>
-        <ResourcesText></ResourcesText>
+        <StyledLink to={routes.resources}>
+          <ResourcesTitle>Resources</ResourcesTitle>
+        </StyledLink>
+        <ResourcesText>
+          Check out some peer reviewed <br></br>and recommended resources
+          <br></br>for effective learning.
+        </ResourcesText>
         <ResourcesRotationContainer>
           <TextCircle text="学ぶためのリソース" />
         </ResourcesRotationContainer>

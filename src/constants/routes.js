@@ -4,6 +4,7 @@ const kanjiDetails = "/kanjidetails";
 const allKanji = "/allkanji";
 const gradeKanji = "/seegrade/:gradeID";
 const about = "/about";
+const resources = "/resources";
 
 export const routes = {
   home,
@@ -12,4 +13,5 @@ export const routes = {
   allKanji,
   gradeKanji,
   about,
+  resources,
 };
