@@ -7,7 +7,7 @@ export const Container = styled.div`
   left: 0;
   width: 100%;
   height: 2200px;
-  margin-top: 20px;
+  margin-top: 25px;
 `;
 
 export const BodyContainer = styled.div`
