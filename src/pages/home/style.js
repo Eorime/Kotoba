@@ -7,5 +7,5 @@ export const TickerContainer = styled.div`
   border-radius: 30px;
   width: 75%;
   margin: 60px auto;
-  padding-bottom: 5%;
+  padding-bottom: 10%;
 `;
