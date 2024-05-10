@@ -32,7 +32,7 @@ export const AllGradeTitle = styled.h6`
   font-size: 42px;
   position: absolute;
   top: 250px;
-  left: 250px;
+  left: 290px;
 `;
 
 export const AllGradeText = styled.p`
@@ -44,7 +44,7 @@ export const AllKanjiTitle = styled.h6`
   font-size: 42px;
   position: absolute;
   top: 500px;
-  right: 410px;
+  right: 380px;
 `;
 
 export const AllKanjiText = styled.p`
@@ -56,7 +56,7 @@ export const AboutTitle = styled.h6`
   font-size: 42px;
   position: absolute;
   top: 850px;
-  left: 250px;
+  left: 290px;
 `;
 
 export const AboutText = styled.p`
@@ -69,7 +69,7 @@ export const ResourcesTitle = styled.h6`
   font-size: 42px;
   position: absolute;
   top: 1200px;
-  right: 380px;
+  right: 340px;
 `;
 
 export const ResourcesText = styled.p`
@@ -79,4 +79,26 @@ export const ResourcesText = styled.p`
   right: 380px;
 `;
 
-//ro trialebs wreze egeti warwera fonze da eweros iaponurad kanji by grade (学年別の漢字), kanji, about, すべての漢字, 学ぶためのリソース, プロジェクトについて
+export const GradeRotationContainer = styled.div`
+  position: absolute;
+  top: 265px;
+  left: 180px;
+`;
+
+export const AllRotationContainer = styled.div`
+  position: absolute;
+  top: 520px;
+  right: 440px;
+`;
+
+export const AboutRotationContainer = styled.div`
+  position: absolute;
+  top: 860px;
+  left: 180px;
+`;
+
+export const ResourcesRotationContainer = styled.div`
+  position: absolute;
+  top: 1210px;
+  right: 430px;
+`;
