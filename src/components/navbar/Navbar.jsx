@@ -12,11 +12,11 @@ const Navbar = () => {
   return (
     <Container>
       <NavContainer>
-        <StyledLink to={routes.allKanji}>
-          <NavElement>All Kanji</NavElement>
-        </StyledLink>
         <StyledLink to={routes.seeKanji}>
           <NavElement>Kanji Grades</NavElement>
+        </StyledLink>
+        <StyledLink to={routes.allKanji}>
+          <NavElement>All Kanji</NavElement>
         </StyledLink>
         <StyledLink to={routes.home}>
           <NavLogo>
