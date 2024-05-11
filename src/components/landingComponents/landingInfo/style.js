@@ -7,7 +7,7 @@ export const Container = styled.div`
   position: absolute;
   left: 0;
   width: 100%;
-  height: 2200px;
+  height: 1900px;
   margin-top: 25px;
 `;
 
@@ -22,7 +22,7 @@ export const MainText = styled.h1`
   font-size: 164px;
   position: absolute;
   margin-top: 150px;
-  left: 47.5vw;
+  left: 47vw;
   -webkit-text-stroke-width: 2px;
   -webkit-text-stroke-color: white;
   line-height: 300px;
@@ -34,7 +34,7 @@ export const AllGradeTitle = styled.h6`
   position: absolute;
   top: 250px;
   left: 290px;
-  transition: color 0.5s ease;
+  transition: color 0.3s ease;
 
   &: hover {
     color: #f36276;
@@ -56,7 +56,7 @@ export const AllKanjiTitle = styled.h6`
   position: absolute;
   top: 500px;
   right: 380px;
-  transition: color 0.5s ease;
+  transition: color 0.3s ease;
 
   &: hover {
     color: #f36276;
@@ -78,7 +78,7 @@ export const AboutTitle = styled.h6`
   position: absolute;
   top: 850px;
   left: 290px;
-  transition: color 0.5s ease;
+  transition: color 0.3s ease;
 
   &: hover {
     color: #f36276;
@@ -100,7 +100,7 @@ export const ResourcesTitle = styled.h6`
   position: absolute;
   top: 1200px;
   right: 360px;
-  transition: color 0.5s ease;
+  transition: color 0.3s ease;
 
   &: hover {
     color: #f36276;
