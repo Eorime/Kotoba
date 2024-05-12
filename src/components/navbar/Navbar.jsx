@@ -13,7 +13,7 @@ const Navbar = () => {
     <Container>
       <NavContainer>
         <StyledLink to={routes.seeKanji}>
-          <NavElement>Kanji Grades</NavElement>
+          <NavElement>Kanji Types</NavElement>
         </StyledLink>
         <StyledLink to={routes.allKanji}>
           <NavElement>All Kanji</NavElement>

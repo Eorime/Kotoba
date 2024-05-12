@@ -28,10 +28,10 @@ const LandingInfo = () => {
           初<br></br>め<br></br>ま<br></br>し<br></br>て
         </MainText>
         <StyledLink to={routes.gradeKanji}>
-          <AllGradeTitle>Kanji By Grades</AllGradeTitle>
+          <AllGradeTitle>Kanji By Grade and Groups</AllGradeTitle>
         </StyledLink>
         <AllGradeText>
-          See all kanji grades and their <br></br> corresponding kanji
+          See all grades and groups and their <br></br> corresponding kanji
           characters.
         </AllGradeText>
         <GradeRotationContainer>

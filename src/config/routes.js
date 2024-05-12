@@ -7,6 +7,7 @@ import KanjiPerGrade from "../pages/kanjiPerGrade/KanjiPerGrade";
 import SeeKanji from "../pages/seeKanji/SeeKanji";
 import About from "../pages/about/About";
 import Resources from "../pages/resources/Resources";
+import KanjiGroups from "../pages/kanjiGroups/KanjiGroups";
 
 export const appRoutes = [
   { path: routes.home, Component: Home },
@@ -35,5 +36,9 @@ export const appRoutes = [
   {
     path: routes.resources,
     Component: Resources,
+  },
+  {
+    path: routes.kanjiGroups,
+    Component: KanjiGroups,
   },
 ];
