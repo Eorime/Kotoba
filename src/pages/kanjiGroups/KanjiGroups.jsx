@@ -3,6 +3,7 @@ import { fetchData } from "../../api";
 import { useState, useEffect } from "react";
 import { Container } from "./style";
 import Navbar from "../../components/navbar/Navbar";
+import { Spinner } from "../../GlobalStyle";
 
 const KanjiGroups = () => {
   const [joyoData, setJoyoData] = useState();
@@ -43,8 +44,14 @@ const KanjiGroups = () => {
   return (
     <Container>
       <Navbar />
-      {joyoData}
-      {jinmeyoData}
+      {loading ? (
+        <Spinner color="#ef1548" size={100} />
+      ) : (
+        <>
+          {joyoData}
+          {jinmeyoData}
+        </>
+      )}
     </Container>
   );
 };

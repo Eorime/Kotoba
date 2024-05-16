@@ -5,6 +5,7 @@ import { Link } from "react-router-dom";
 import { Container, GradeContainer, GradeKanji } from "./style";
 import Navbar from "../../components/navbar/Navbar";
 import SeeKanji from "../seeKanji/SeeKanji";
+import { Spinner } from "../../GlobalStyle";
 
 const KanjiPerGrade = () => {
   const [gradeKanjiData, setGradeKanjiData] = useState([]);
@@ -43,13 +44,19 @@ const KanjiPerGrade = () => {
   return (
     <Container>
       <SeeKanji />
-      {gradeKanjiRow.map((row, index) => (
-        <GradeContainer key={index}>
-          {row.map((kanji, subIndex) => (
-            <GradeKanji key={subIndex}>{kanji}</GradeKanji>
+      {loading ? (
+        <Spinner color="#ef1548" size={100} />
+      ) : (
+        <>
+          {gradeKanjiRow.map((row, index) => (
+            <GradeContainer key={index}>
+              {row.map((kanji, subIndex) => (
+                <GradeKanji key={subIndex}>{kanji}</GradeKanji>
+              ))}
+            </GradeContainer>
           ))}
-        </GradeContainer>
-      ))}
+        </>
+      )}
     </Container>
   );
 };
