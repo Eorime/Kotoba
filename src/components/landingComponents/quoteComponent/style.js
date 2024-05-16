@@ -14,7 +14,7 @@ export const Container = styled.div`
   position: absolute;
   height: 800px;
   left: 0;
-  margin-top: 1850px;
+  margin-top: 1800px;
   background-color: #f1e7db;
   display: flex;
   justify-content: center;
@@ -27,7 +27,7 @@ export const QuoteContainer = styled.div`
   width: 70%;
   height: 50%;
   align-self: center;
-  margin-top: -40px;
+  margin-top: 120px;
 `;
 
 export const Quote = styled.h6`
@@ -41,7 +41,7 @@ export const Quote = styled.h6`
 export const Translation = styled.h3`
   color: #302e2c;
   font-size: 36px;
-  margin-left: 70px;
+  margin-left: 110px;
   margin-top: -60px;
 `;
 
@@ -53,7 +53,7 @@ export const SpinContainer = styled.div`
   background-color: #f1e7db;
   position: absolute;
   left: 240px;
-  top: 130px;
+  top: 220px;
   display: flex;
   justify-content: center;
   animation: ${rotate} 8s linear infinite;

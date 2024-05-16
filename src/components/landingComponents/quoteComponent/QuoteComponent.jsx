@@ -15,9 +15,9 @@ const QuoteComponent = () => {
         <SpinText>引用</SpinText>
       </SpinContainer>
       <QuoteContainer>
-        <Quote>違う言語というのは、違う人生のビジョンである。</Quote>
+        <Quote>「新しい言語は新しい人生の始まり。」</Quote>
         <Translation>
-          A different language is a different vision of life.
+          A new language is the beginning of a new life.
         </Translation>
       </QuoteContainer>
     </Container>

@@ -4,6 +4,7 @@ import Navbar from "../../components/navbar/Navbar";
 import TickerTape from "../../components/landingComponents/tickerTape/TickerTape";
 import LandingInfo from "../../components/landingComponents/landingInfo/LandingInfo";
 import QuoteComponent from "../../components/landingComponents/quoteComponent/QuoteComponent";
+import Footer from "../../components/footer/Footer";
 
 const Home = () => {
   return (
@@ -14,6 +15,7 @@ const Home = () => {
       </TickerContainer>
       <LandingInfo />
       <QuoteComponent />
+      <Footer />
     </HomeContainer>
   );
 };

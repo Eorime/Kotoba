@@ -21,7 +21,7 @@ export const MainText = styled.h1`
   color: black;
   font-size: 164px;
   position: absolute;
-  margin-top: 150px;
+  margin-top: 100px;
   left: 47vw;
   -webkit-text-stroke-width: 2px;
   -webkit-text-stroke-color: white;
