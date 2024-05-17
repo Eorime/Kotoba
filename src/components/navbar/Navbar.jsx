@@ -30,7 +30,7 @@ const Navbar = () => {
         <StyledLink to={routes.about}>
           <NavElement>About</NavElement>
         </StyledLink>
-        <StyledLink>
+        <StyledLink to={routes.resources}>
           <NavElement>Resources</NavElement>
         </StyledLink>
       </NavContainer>
