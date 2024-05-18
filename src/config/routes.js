@@ -16,11 +16,6 @@ export const appRoutes = [
     path: routes.seeKanji,
     Component: SeeKanji,
   },
-
-  {
-    path: routes.kanjiDetails,
-    Component: KanjiDetails,
-  },
   {
     path: routes.allKanji,
     Component: AllKanji,
