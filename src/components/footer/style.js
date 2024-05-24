@@ -5,7 +5,7 @@ export const Container = styled.div`
   position: absolute;
   background-color: black;
   width: 100%;
-  top: 360vh;
+  top: 340vh;
   left: 0;
   height: 320px;
   display: flex;
