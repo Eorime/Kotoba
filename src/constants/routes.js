@@ -5,7 +5,7 @@ const gradeKanji = "/seegrade/:gradeID";
 const about = "/about";
 const resources = "/resources";
 const kanjiJoyo = "/joyoKanji";
-const kanjiJinmeyo = "jinmeyoKanji";
+const kanjiJinmeyo = "/jinmeyoKanji";
 
 export const routes = {
   home,

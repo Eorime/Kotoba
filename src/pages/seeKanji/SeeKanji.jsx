@@ -14,8 +14,12 @@ const SeeKanji = () => {
     navigate(routes.gradeKanji.replace("/:gradeID", `/${grade}`));
   };
 
-  const handleGroupClick = (group) => {
-    navigate(routes.kanjiGroups);
+  const handleJoyoClick = (group) => {
+    navigate(routes.kanjiJoyo);
+  };
+
+  const handleJinmeyoClick = (group) => {
+    navigate(routes.kanjiJinmeyo);
   };
 
   return (
@@ -26,8 +30,8 @@ const SeeKanji = () => {
           Grade {grade} Kanji
         </GradeButton>
       ))}
-      <GroupButton onClick={handleGroupClick}>Jinmeyo</GroupButton>
-      <GroupButton>Joyo</GroupButton>
+      <GroupButton onClick={handleJinmeyoClick}>Jinmeyo</GroupButton>
+      <GroupButton onClick={handleJoyoClick}>Joyo</GroupButton>
     </Container>
   );
 };

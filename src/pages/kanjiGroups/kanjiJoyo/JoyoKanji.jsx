@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from "react";
-import { Container } from "../style";
 import { fetchData } from "../../../api";
 import { Spinner } from "../../../GlobalStyle";
 import SeeKanji from "../../seeKanji/SeeKanji";
+import { Container } from "./style";
 
 const JoyoKanji = () => {
   const [joyoData, setJoyoData] = useState();
