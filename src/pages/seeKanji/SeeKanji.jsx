@@ -4,7 +4,14 @@ import { fetchData } from "../../api";
 import { useNavigate } from "react-router-dom";
 import { routes } from "../../constants/routes";
 import Navbar from "../../components/navbar/Navbar";
-import { Container, GradeButton, GroupButton } from "./style";
+import {
+  ButtonsContainer,
+  Container,
+  GradeButton,
+  GradeContainer,
+  GroupButton,
+  GroupContainer,
+} from "./style";
 
 const SeeKanji = () => {
   const navigate = useNavigate();
@@ -25,13 +32,20 @@ const SeeKanji = () => {
   return (
     <Container>
       <Navbar />
-      {buttonArray.map((grade) => (
-        <GradeButton key={grade} onClick={() => handleGradeClick(grade)}>
-          Grade {grade} Kanji
-        </GradeButton>
-      ))}
-      <GroupButton onClick={handleJinmeyoClick}>Jinmeyo</GroupButton>
-      <GroupButton onClick={handleJoyoClick}>Joyo</GroupButton>
+      <ButtonsContainer>
+        <GradeContainer>
+          {buttonArray.map((grade) => (
+            <GradeButton key={grade} onClick={() => handleGradeClick(grade)}>
+              GRADE {grade}
+            </GradeButton>
+          ))}
+        </GradeContainer>
+
+        <GroupContainer>
+          <GroupButton onClick={handleJinmeyoClick}>JINMEIYO</GroupButton>
+          <GroupButton onClick={handleJoyoClick}>JOYO</GroupButton>
+        </GroupContainer>
+      </ButtonsContainer>
     </Container>
   );
 };

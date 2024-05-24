@@ -6,8 +6,7 @@ import Footer from "../../components/footer/Footer";
 const About = () => {
   return (
     <Container>
-      <Navbar />
-      <Footer />
+      <Navbar />\{" "}
     </Container>
   );
 };

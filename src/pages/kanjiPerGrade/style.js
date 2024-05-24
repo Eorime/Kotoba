@@ -6,6 +6,8 @@ export const GradeContainer = styled.div`
   display: flex;
   flex-direction: row;
   font-size: 20px;
+  margin-left: 15%;
+  margin-top: 40px;
 `;
 
 export const GradeKanji = styled.div`

@@ -1,6 +1,12 @@
 import React, { useEffect, useState } from "react";
 import { fetchData } from "../../api";
-import { AllContainer, AllKanjij, Container, Kanji } from "./style";
+import {
+  AllContainer,
+  AllKanjij,
+  Container,
+  ContainerAllKanji,
+  Kanji,
+} from "./style";
 import { PuffLoader } from "react-spinners";
 import { Spinner } from "../../GlobalStyle";
 import Navbar from "../../components/navbar/Navbar";
@@ -42,13 +48,15 @@ const AllKanji = () => {
       {loading ? (
         <Spinner color={"#ef1548"} size={100} />
       ) : (
-        kanjiRow.map((row, rowIndex) => (
-          <AllContainer key={rowIndex}>
-            {row.map((kanji, index) => (
-              <Kanji key={index}>{kanji}</Kanji>
-            ))}
-          </AllContainer>
-        ))
+        <ContainerAllKanji>
+          {kanjiRow.map((row, rowIndex) => (
+            <AllContainer key={rowIndex}>
+              {row.map((kanji, index) => (
+                <Kanji key={index}>{kanji}</Kanji>
+              ))}
+            </AllContainer>
+          ))}
+        </ContainerAllKanji>
       )}
     </Container>
   );
