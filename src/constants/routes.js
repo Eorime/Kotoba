@@ -6,6 +6,7 @@ const about = "/about";
 const resources = "/resources";
 const kanjiJoyo = "/joyoKanji";
 const kanjiJinmeyo = "/jinmeyoKanji";
+const kanjiDetails = "/kanjiDetails/:kanji";
 
 export const routes = {
   home,
@@ -16,4 +17,5 @@ export const routes = {
   resources,
   kanjiJoyo,
   kanjiJinmeyo,
+  kanjiDetails,
 };

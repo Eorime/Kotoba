@@ -42,8 +42,8 @@ const SeeKanji = () => {
         </GradeContainer>
 
         <GroupContainer>
-          <GroupButton onClick={handleJinmeyoClick}>JINMEIYO</GroupButton>
           <GroupButton onClick={handleJoyoClick}>JOYO</GroupButton>
+          <GroupButton onClick={handleJinmeyoClick}>JINMEIYO</GroupButton>
         </GroupContainer>
       </ButtonsContainer>
     </Container>

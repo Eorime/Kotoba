@@ -41,4 +41,8 @@ export const appRoutes = [
     path: routes.kanjiJinmeyo,
     Component: JinmeyoKanji,
   },
+  {
+    path: routes.kanjiDetails,
+    Component: KanjiDetails,
+  },
 ];

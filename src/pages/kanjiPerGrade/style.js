@@ -4,8 +4,8 @@ export const Container = styled.div``;
 
 export const AllGradeContainer = styled.div`
   margin-left: 12%;
-  border: 2px solid black;
-  border-radius: 10px;
+  border: 1px solid black;
+  border-radius: 12px;
   margin-right: 12%;
   padding: 20px;
 `;

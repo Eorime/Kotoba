@@ -4,7 +4,7 @@ export const Container = styled.div``;
 
 export const AllJoyoContainer = styled.div`
   margin-left: 12%;
-  border: 2px solid black;
+  border: 1px solid black;
   border-radius: 10px;
   margin-right: 12%;
   padding: 20px;
