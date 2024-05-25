@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import { fetchData } from "../../../api";
 import { Spinner } from "../../../GlobalStyle";
 import SeeKanji from "../../seeKanji/SeeKanji";
-import { Container, JoyoContainer, Kanji } from "./style";
+import { AllJoyoContainer, Container, JoyoContainer, Kanji } from "./style";
 
 const JoyoKanji = () => {
   const [joyoData, setJoyoData] = useState();
@@ -38,7 +38,7 @@ const JoyoKanji = () => {
       {loading ? (
         <Spinner color="#ef1548" size={100} />
       ) : (
-        <>
+        <AllJoyoContainer>
           {joyoKanjiRow.map((row, index) => (
             <JoyoContainer key={index}>
               {row.map((kanji, subIndex) => (
@@ -46,8 +46,9 @@ const JoyoKanji = () => {
               ))}
             </JoyoContainer>
           ))}
-        </>
+        </AllJoyoContainer>
       )}
+      {joyoData && <p>Length: {joyoData.length}</p>}
     </Container>
   );
 };

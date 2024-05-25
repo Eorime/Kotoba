@@ -34,7 +34,6 @@ export const AllGradeTitle = styled.h6`
   position: absolute;
   top: 250px;
   left: 290px;
-  transition: color 0.3s ease;
 
   &: hover {
     color: #f36276;
@@ -56,7 +55,6 @@ export const AllKanjiTitle = styled.h6`
   position: absolute;
   top: 500px;
   right: 380px;
-  transition: color 0.3s ease;
 
   &: hover {
     color: #f36276;
@@ -78,7 +76,6 @@ export const AboutTitle = styled.h6`
   position: absolute;
   top: 850px;
   left: 290px;
-  transition: color 0.3s ease;
 
   &: hover {
     color: #f36276;
@@ -100,7 +97,6 @@ export const ResourcesTitle = styled.h6`
   position: absolute;
   top: 1200px;
   right: 360px;
-  transition: color 0.3s ease;
 
   &: hover {
     color: #f36276;

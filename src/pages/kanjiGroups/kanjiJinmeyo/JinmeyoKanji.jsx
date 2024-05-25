@@ -2,7 +2,12 @@ import React, { useEffect, useState } from "react";
 import { fetchData } from "../../../api";
 import { Spinner } from "../../../GlobalStyle";
 import SeeKanji from "../../seeKanji/SeeKanji";
-import { Container, JinmeyoContainer, Kanji } from "./style";
+import {
+  AllJinmeyoContainer,
+  Container,
+  JinmeyoContainer,
+  Kanji,
+} from "./style";
 
 const JinmeyoKanji = () => {
   const [jinmeyoData, setJinmeyoData] = useState();
@@ -43,7 +48,7 @@ const JinmeyoKanji = () => {
       {loading ? (
         <Spinner color="#ef1548" size={100} />
       ) : (
-        <>
+        <AllJinmeyoContainer>
           {jinmeyoKanjiRow.map((row, index) => (
             <JinmeyoContainer key={index}>
               {row.map((kanji, subIndex) => (
@@ -51,8 +56,9 @@ const JinmeyoKanji = () => {
               ))}
             </JinmeyoContainer>
           ))}
-        </>
+        </AllJinmeyoContainer>
       )}
+      {jinmeyoData && <p>Length: {jinmeyoData.length}</p>}
     </Container>
   );
 };

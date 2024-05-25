@@ -2,7 +2,14 @@ import React, { useEffect, useState } from "react";
 import { fetchData } from "../../api";
 import { useParams } from "react-router-dom";
 import { Link } from "react-router-dom";
-import { Container, GradeContainer, GradeKanji } from "./style";
+import {
+  AllGradeCcontainer,
+  AllGradeContainer,
+  Container,
+  ContainerGrades,
+  GradeContainer,
+  GradeKanji,
+} from "./style";
 import Navbar from "../../components/navbar/Navbar";
 import SeeKanji from "../seeKanji/SeeKanji";
 import { Spinner } from "../../GlobalStyle";
@@ -30,7 +37,7 @@ const KanjiPerGrade = () => {
     fetchAll();
   }, [gradeID]);
 
-  const gradeSliced = gradeKanjiData.slice(0, 1200);
+  const gradeSliced = gradeKanjiData.slice(0, 100);
   const gradeRowSize = 20;
   const gradeKanjiRow = Array.from(
     { length: Math.ceil(gradeSliced.length / gradeRowSize) },
@@ -47,7 +54,7 @@ const KanjiPerGrade = () => {
       {loading ? (
         <Spinner color="#ef1548" size={100} />
       ) : (
-        <>
+        <AllGradeContainer>
           {gradeKanjiRow.map((row, index) => (
             <GradeContainer key={index}>
               {row.map((kanji, subIndex) => (
@@ -55,8 +62,9 @@ const KanjiPerGrade = () => {
               ))}
             </GradeContainer>
           ))}
-        </>
+        </AllGradeContainer>
       )}
+      {gradeKanjiData.length}
     </Container>
   );
 };
