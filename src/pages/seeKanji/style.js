@@ -1,4 +1,25 @@
-import styled from "styled-components";
+import styled, { css } from "styled-components";
+
+const buttonStyles = css`
+  border: 2px solid #e4acad;
+  border-radius: 20px;
+  padding: 10px 15px;
+  color: rgba(0, 0, 0, 0.8);
+  margin-right: 35px;
+  font-size: 24px;
+  background-color: transparent;
+  font-weight: bold;
+
+  &:hover {
+    cursor: pointer;
+    background-color: #e4acad;
+  }
+
+  /* Apply background color when active */
+  &.active {
+    background-color: #e4acad;
+  }
+`;
 
 export const Container = styled.div``;
 
@@ -13,35 +34,11 @@ export const ButtonsContainer = styled.div`
 export const GradeContainer = styled.div``;
 
 export const GradeButton = styled.button`
-  border: 2px solid #e4acad;
-  border-radius: 20px;
-  padding: 10px 15px;
-  color: rgba(0, 0, 0, 0.8);
-  margin-right: 35px;
-  font-size: 24px;
-  background-color: transparent;
-  font-weight: bold;
-
-  &: hover {
-    cursor: pointer;
-    background-color: #e4acad;
-  }
+  ${buttonStyles}
 `;
 
 export const GroupContainer = styled.div``;
 
 export const GroupButton = styled.button`
-  border: 2px solid #e4acad;
-  border-radius: 20px;
-  padding: 10px 15px;
-  color: rgba(0, 0, 0, 0.8);
-  margin-right: 35px;
-  font-size: 24px;
-  background-color: transparent;
-  font-weight: bold;
-
-  &: hover {
-    cursor: pointer;
-    background-color: #e4acad;
-  }
+  ${buttonStyles}
 `;

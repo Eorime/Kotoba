@@ -3,11 +3,14 @@ import { fetchData } from "../../../api";
 import { Spinner } from "../../../GlobalStyle";
 import SeeKanji from "../../seeKanji/SeeKanji";
 import { AllJoyoContainer, Container, JoyoContainer, Kanji } from "./style";
+import { useNavigate } from "react-router-dom";
 
 const JoyoKanji = () => {
   const [joyoData, setJoyoData] = useState();
   const [error, setError] = useState("");
   const [loading, setLoading] = useState(true);
+
+  const navigate = useNavigate();
 
   useEffect(() => {
     const fetchJoyo = async () => {
@@ -32,6 +35,12 @@ const JoyoKanji = () => {
       joyoSliced.slice(index * joyoRowSize, index * joyoRowSize + joyoRowSize)
   );
 
+  const handleKanjiClick = (kanji) => {
+    if (kanji) {
+      navigate(`/kanjiDetails/${kanji}`);
+    }
+  };
+
   return (
     <Container>
       <SeeKanji />
@@ -42,7 +51,9 @@ const JoyoKanji = () => {
           {joyoKanjiRow.map((row, index) => (
             <JoyoContainer key={index}>
               {row.map((kanji, subIndex) => (
-                <Kanji key={subIndex}>{kanji}</Kanji>
+                <Kanji key={subIndex} onClick={() => handleKanjiClick(kanji)}>
+                  {kanji}
+                </Kanji>
               ))}
             </JoyoContainer>
           ))}

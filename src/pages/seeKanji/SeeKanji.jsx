@@ -1,7 +1,5 @@
-import React, { useEffect, useState } from "react";
-import { useParams } from "react-router-dom";
-import { fetchData } from "../../api";
-import { useNavigate } from "react-router-dom";
+import React from "react";
+import { useLocation, useNavigate } from "react-router-dom";
 import { routes } from "../../constants/routes";
 import Navbar from "../../components/navbar/Navbar";
 import {
@@ -15,18 +13,21 @@ import {
 
 const SeeKanji = () => {
   const navigate = useNavigate();
+  const location = useLocation();
   const buttonArray = [1, 2, 3, 4, 5, 6];
+  const joyoRoute = routes.kanjiJoyo;
+  const jinmeyoRoute = routes.kanjiJinmeyo;
 
   const handleGradeClick = (grade) => {
-    navigate(routes.gradeKanji.replace("/:gradeID", `/${grade}`));
+    navigate(routes.gradeKanji.replace(":gradeID", grade));
   };
 
-  const handleJoyoClick = (group) => {
-    navigate(routes.kanjiJoyo);
+  const handleJoyoClick = () => {
+    navigate(joyoRoute);
   };
 
-  const handleJinmeyoClick = (group) => {
-    navigate(routes.kanjiJinmeyo);
+  const handleJinmeyoClick = () => {
+    navigate(jinmeyoRoute);
   };
 
   return (
@@ -35,15 +36,34 @@ const SeeKanji = () => {
       <ButtonsContainer>
         <GradeContainer>
           {buttonArray.map((grade) => (
-            <GradeButton key={grade} onClick={() => handleGradeClick(grade)}>
+            <GradeButton
+              key={grade}
+              onClick={() => handleGradeClick(grade)}
+              className={
+                location.pathname ===
+                routes.gradeKanji.replace(":gradeID", grade.toString())
+                  ? "active"
+                  : ""
+              }
+            >
               GRADE {grade}
             </GradeButton>
           ))}
         </GradeContainer>
 
         <GroupContainer>
-          <GroupButton onClick={handleJoyoClick}>JOYO</GroupButton>
-          <GroupButton onClick={handleJinmeyoClick}>JINMEIYO</GroupButton>
+          <GroupButton
+            onClick={handleJoyoClick}
+            className={location.pathname === joyoRoute ? "active" : ""}
+          >
+            JOYO
+          </GroupButton>
+          <GroupButton
+            onClick={handleJinmeyoClick}
+            className={location.pathname === jinmeyoRoute ? "active" : ""}
+          >
+            JINMEIYO
+          </GroupButton>
         </GroupContainer>
       </ButtonsContainer>
     </Container>

@@ -13,8 +13,6 @@ const KanjiDetails = () => {
   const [error, setError] = useState("");
 
   useEffect(() => {
-    console.log("Character from URL:", encodedCharacter);
-
     const fetchDetails = async () => {
       try {
         const response = await fetchData(
@@ -43,13 +41,23 @@ const KanjiDetails = () => {
       ) : kanjiDetailsData ? (
         <div>
           <h2>Kanji: {encodedCharacter}</h2>
-          <p>Kun Readings: {kanjiDetailsData.kun_readings.join(", ")}</p>
-          <p>On Readings: {kanjiDetailsData.on_readings.join(", ")}</p>
-          <p>Name Readings: {kanjiDetailsData.name_readings.join(", ")}</p>
+          {kanjiDetailsData &&
+            kanjiDetailsData.kun_readings &&
+            kanjiDetailsData.kun_readings.length > 0 && (
+              <p>Kun Readings: {kanjiDetailsData.kun_readings.join(", ")}</p>
+            )}
+
+          {kanjiDetailsData &&
+            kanjiDetailsData.on_readings &&
+            kanjiDetailsData.on_readings.length > 0 && (
+              <p>On Readings: {kanjiDetailsData.on_readings.join(", ")}</p>
+            )}
+
           <p>Meanings: {kanjiDetailsData.meanings.join(", ")}</p>
           <p>Stroke Count: {kanjiDetailsData.stroke_count}</p>
-          <p>Unicode: {kanjiDetailsData.unicode}</p>
-          <p>Grade: {kanjiDetailsData.grade}</p>
+          {kanjiDetailsData && kanjiDetailsData.grade && (
+            <p>Grade : {kanjiDetailsData.grade}</p>
+          )}
         </div>
       ) : (
         <p>No data available for this kanji</p>

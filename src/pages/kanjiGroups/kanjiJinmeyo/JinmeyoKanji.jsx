@@ -8,11 +8,14 @@ import {
   JinmeyoContainer,
   Kanji,
 } from "./style";
+import { useNavigate } from "react-router-dom";
 
 const JinmeyoKanji = () => {
   const [jinmeyoData, setJinmeyoData] = useState();
   const [error, setError] = useState("");
   const [loading, setLoading] = useState(true);
+
+  const navigate = useNavigate();
 
   useEffect(() => {
     const fetchJinmeyo = async () => {
@@ -42,6 +45,12 @@ const JinmeyoKanji = () => {
       )
   );
 
+  const handleKanjiClick = (kanji) => {
+    if (kanji) {
+      navigate(`/kanjiDetails/${kanji}`);
+    }
+  };
+
   return (
     <Container>
       <SeeKanji />
@@ -52,7 +61,9 @@ const JinmeyoKanji = () => {
           {jinmeyoKanjiRow.map((row, index) => (
             <JinmeyoContainer key={index}>
               {row.map((kanji, subIndex) => (
-                <Kanji key={subIndex}>{kanji}</Kanji>
+                <Kanji key={subIndex} onClick={() => handleKanjiClick(kanji)}>
+                  {kanji}
+                </Kanji>
               ))}
             </JinmeyoContainer>
           ))}
