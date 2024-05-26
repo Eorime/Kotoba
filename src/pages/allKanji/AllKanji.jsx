@@ -1,13 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { fetchData } from "../../api";
-import {
-  AllContainer,
-  AllKanjij,
-  Container,
-  ContainerAllKanji,
-  Kanji,
-} from "./style";
-import { PuffLoader } from "react-spinners";
+import { AllContainer, Container, ContainerAllKanji, Kanji } from "./style";
 import { Spinner } from "../../GlobalStyle";
 import Navbar from "../../components/navbar/Navbar";
 import { useNavigate } from "react-router-dom";
@@ -38,7 +31,7 @@ const AllKanji = () => {
     console.log(kanjiData);
   }, [kanjiData]);
 
-  const sliced = kanjiData.slice(0, 160);
+  const sliced = kanjiData.slice(0, 100);
   const rowSize = 20;
   const kanjiRow = Array.from(
     { length: Math.ceil(sliced.length / rowSize) },

@@ -27,6 +27,7 @@ export const QuoteContainer = styled.div`
   width: 70%;
   height: 50%;
   align-self: center;
+  margin-left: 65px;
   margin-top: -30px;
 `;
 
@@ -52,7 +53,7 @@ export const SpinContainer = styled.div`
   height: 90px;
   background-color: #f1e7db;
   position: absolute;
-  left: 240px;
+  left: 270px;
   top: 150px;
   display: flex;
   justify-content: center;

@@ -1,16 +1,12 @@
 import React, { useEffect, useState } from "react";
 import { fetchData } from "../../api";
 import { useNavigate, useParams } from "react-router-dom";
-import { Link } from "react-router-dom";
 import {
-  AllGradeCcontainer,
   AllGradeContainer,
   Container,
-  ContainerGrades,
   GradeContainer,
   GradeKanji,
 } from "./style";
-import Navbar from "../../components/navbar/Navbar";
 import SeeKanji from "../seeKanji/SeeKanji";
 import { Spinner } from "../../GlobalStyle";
 
