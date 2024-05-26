@@ -10,11 +10,14 @@ import {
 import { PuffLoader } from "react-spinners";
 import { Spinner } from "../../GlobalStyle";
 import Navbar from "../../components/navbar/Navbar";
+import { useNavigate } from "react-router-dom";
 
 const AllKanji = () => {
   const [kanjiData, setKanjiData] = useState([]);
   const [error, setError] = useState("");
   const [loading, setLoading] = useState(true);
+
+  const navigate = useNavigate();
 
   useEffect(() => {
     const fetchAll = async () => {
@@ -42,6 +45,12 @@ const AllKanji = () => {
     (_, index) => sliced.slice(index * rowSize, index * rowSize + rowSize)
   );
 
+  const handleKanjiClick = (kanji) => {
+    if (kanji) {
+      navigate(`/kanjiDetails/${kanji}`);
+    }
+  };
+
   return (
     <Container>
       <Navbar />
@@ -52,7 +61,9 @@ const AllKanji = () => {
           {kanjiRow.map((row, rowIndex) => (
             <AllContainer key={rowIndex}>
               {row.map((kanji, index) => (
-                <Kanji key={index}>{kanji}</Kanji>
+                <Kanji key={index} onClick={() => handleKanjiClick(kanji)}>
+                  {kanji}
+                </Kanji>
               ))}
             </AllContainer>
           ))}

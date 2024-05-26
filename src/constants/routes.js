@@ -6,7 +6,7 @@ const about = "/about";
 const resources = "/resources";
 const kanjiJoyo = "/joyoKanji";
 const kanjiJinmeyo = "/jinmeyoKanji";
-const kanjiDetails = "/kanjiDetails/:kanji";
+const kanjiDetails = "/kanjiDetails/:encodedCharacter";
 
 export const routes = {
   home,
