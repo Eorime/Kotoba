@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { fetchData } from "../../api";
-import { useParams } from "react-router-dom";
+import { useNavigate, useParams } from "react-router-dom";
 import { Link } from "react-router-dom";
 import {
   AllGradeCcontainer,
@@ -19,6 +19,8 @@ const KanjiPerGrade = () => {
   const [error, setError] = useState("");
   const [loading, setLoading] = useState(true);
   const { gradeID } = useParams();
+
+  const navigate = useNavigate();
 
   useEffect(() => {
     const fetchAll = async () => {
@@ -48,21 +50,34 @@ const KanjiPerGrade = () => {
       )
   );
 
+  const handleKanjiClick = (kanji) => {
+    if (kanji) {
+      navigate(`/kanjiDetails/${kanji}`);
+    }
+  };
+
   return (
     <Container>
       <SeeKanji />
       {loading ? (
         <Spinner color="#ef1548" size={100} />
       ) : (
-        <AllGradeContainer>
-          {gradeKanjiRow.map((row, index) => (
-            <GradeContainer key={index}>
-              {row.map((kanji, subIndex) => (
-                <GradeKanji key={subIndex}>{kanji}</GradeKanji>
-              ))}
-            </GradeContainer>
-          ))}
-        </AllGradeContainer>
+        { gradeKanjiData } && (
+          <AllGradeContainer>
+            {gradeKanjiRow.map((row, index) => (
+              <GradeContainer key={index}>
+                {row.map((kanji, subIndex) => (
+                  <GradeKanji
+                    key={subIndex}
+                    onClick={() => handleKanjiClick(kanji)}
+                  >
+                    {kanji}
+                  </GradeKanji>
+                ))}
+              </GradeContainer>
+            ))}
+          </AllGradeContainer>
+        )
       )}
       {gradeKanjiData.length}
     </Container>

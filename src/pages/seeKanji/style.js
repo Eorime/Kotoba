@@ -13,7 +13,7 @@ export const ButtonsContainer = styled.div`
 export const GradeContainer = styled.div``;
 
 export const GradeButton = styled.button`
-  border: 2px solid #d7717f80;
+  border: 2px solid #e4acad;
   border-radius: 20px;
   padding: 10px 15px;
   color: rgba(0, 0, 0, 0.8);
@@ -24,14 +24,14 @@ export const GradeButton = styled.button`
 
   &: hover {
     cursor: pointer;
-    background-color: #d7717f80;
+    background-color: #e4acad;
   }
 `;
 
 export const GroupContainer = styled.div``;
 
 export const GroupButton = styled.button`
-  border: 2px solid #d7717f80;
+  border: 2px solid #e4acad;
   border-radius: 20px;
   padding: 10px 15px;
   color: rgba(0, 0, 0, 0.8);
@@ -42,6 +42,6 @@ export const GroupButton = styled.button`
 
   &: hover {
     cursor: pointer;
-    background-color: #d7717f80;
+    background-color: #e4acad;
   }
 `;
