@@ -3,7 +3,7 @@ import styled from "styled-components";
 export const Container = styled.div``;
 
 export const AllGradeContainer = styled.div`
-  margin-left: 12%;
+  margin-left: 13%;
   border: 1px solid black;
   border-radius: 12px;
   margin-right: 12%;

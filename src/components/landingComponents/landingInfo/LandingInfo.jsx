@@ -27,7 +27,7 @@ const LandingInfo = () => {
         <MainText>
           初<br></br>め<br></br>ま<br></br>し<br></br>て
         </MainText>
-        <StyledLink to={routes.gradeKanji}>
+        <StyledLink to={routes.seeKanji}>
           <AllGradeTitle>Kanji By Grade and Groups</AllGradeTitle>
         </StyledLink>
         <AllGradeText>
