@@ -1,6 +1,15 @@
 // KanjiDetails.js
 import React, { useEffect, useState } from "react";
-import { Container } from "./style";
+import {
+  Container,
+  GradeContainer,
+  GradeParagraph,
+  JLPText,
+  Kanji,
+  KanjiContainer,
+  KanjiDetailsDataContainer,
+  Text,
+} from "./style";
 import { fetchData } from "../../api";
 import { useParams } from "react-router-dom";
 import { Spinner } from "../../GlobalStyle";
@@ -11,6 +20,7 @@ const KanjiDetails = () => {
   const [kanjiDetailsData, setKanjiDetailsData] = useState(null);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState("");
+  const [words, setWords] = useState(null);
 
   useEffect(() => {
     const fetchDetails = async () => {
@@ -31,6 +41,25 @@ const KanjiDetails = () => {
     }
   }, [encodedCharacter]);
 
+  useEffect(() => {
+    const fetchWords = async () => {
+      try {
+        const response = await fetchData(
+          `https://kanjiapi.dev/v1/words/${encodedCharacter}`
+        );
+        setWords(response);
+      } catch (error) {
+        setError(error.message);
+      } finally {
+        setLoading(false);
+      }
+    };
+
+    if (encodedCharacter) {
+      fetchWords();
+    }
+  }, [encodedCharacter]);
+
   return (
     <Container>
       <Navbar />
@@ -40,28 +69,65 @@ const KanjiDetails = () => {
         <p>Error: {error}</p>
       ) : kanjiDetailsData ? (
         <div>
-          <h2>Kanji: {encodedCharacter}</h2>
-          {kanjiDetailsData &&
-            kanjiDetailsData.kun_readings &&
-            kanjiDetailsData.kun_readings.length > 0 && (
-              <p>Kun Readings: {kanjiDetailsData.kun_readings.join(", ")}</p>
-            )}
-
-          {kanjiDetailsData &&
-            kanjiDetailsData.on_readings &&
-            kanjiDetailsData.on_readings.length > 0 && (
-              <p>On Readings: {kanjiDetailsData.on_readings.join(", ")}</p>
-            )}
-
-          <p>Meanings: {kanjiDetailsData.meanings.join(", ")}</p>
-          <p>Stroke Count: {kanjiDetailsData.stroke_count}</p>
           {kanjiDetailsData && kanjiDetailsData.grade && (
-            <p>Grade : {kanjiDetailsData.grade}</p>
+            <GradeContainer>
+              <GradeParagraph>
+                Grade {""}
+                {kanjiDetailsData.grade}
+              </GradeParagraph>
+            </GradeContainer>
           )}
+          <KanjiContainer>
+            <Kanji>{encodedCharacter}</Kanji>
+          </KanjiContainer>
+
+          <KanjiDetailsDataContainer>
+            {kanjiDetailsData && kanjiDetailsData.jlpt && (
+              <JLPText> JLPT N{kanjiDetailsData.jlpt}</JLPText>
+            )}
+            <Text>Meanings: {kanjiDetailsData.meanings.join(", ")}</Text>
+            {kanjiDetailsData &&
+              kanjiDetailsData.kun_readings &&
+              kanjiDetailsData.kun_readings.length > 0 && (
+                <Text>
+                  Kun Readings: {kanjiDetailsData.kun_readings.join(", ")}
+                </Text>
+              )}
+            {kanjiDetailsData &&
+              kanjiDetailsData.on_readings &&
+              kanjiDetailsData.on_readings.length > 0 && (
+                <Text>
+                  On Readings: {kanjiDetailsData.on_readings.join(", ")}
+                </Text>
+              )}
+
+            <Text>Strokes: {kanjiDetailsData.stroke_count}</Text>
+          </KanjiDetailsDataContainer>
         </div>
       ) : (
-        <p>No data available for this kanji</p>
+        <p>No data for this kanji</p>
       )}
+      {words &&
+        words.length > 0 &&
+        words
+          .flatMap((item) =>
+            item.variants
+              .filter((variant) => variant.pronounced)
+              .map((variant) => ({
+                ...variant,
+                meanings: item.meanings,
+              }))
+          )
+          .slice(0, 20)
+          .map((variant, index) => (
+            <div key={index} style={{ marginBottom: "20px" }}>
+              <p>Written: {variant.written}</p>
+              <p>Pronounced: {variant.pronounced}</p>
+              {variant.meanings.map((meaning, i) => (
+                <p key={i}>Meanings: {meaning.glosses.join(", ")}</p>
+              ))}
+            </div>
+          ))}
     </Container>
   );
 };
