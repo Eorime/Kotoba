@@ -14,6 +14,11 @@ import {
   WordsHeader,
   WordContainer,
   WordsContainer,
+  DICTIONARYKANJI,
+  DictionaryWord,
+  WordReading,
+  WordMeaning,
+  KOTOBA,
 } from "./style";
 import { fetchData } from "../../api";
 import { useNavigate, useParams } from "react-router-dom";
@@ -75,8 +80,9 @@ const KanjiDetails = () => {
     <Container>
       <BackButton onClick={handleBackButton}>🢀</BackButton>
       <Navbar />
+      <KOTOBA>言葉</KOTOBA>
       {loading ? (
-        <Spinner color="#ef1548" size={100} />
+        <Spinner color="#b7dcd1" size={100} />
       ) : error ? (
         <p>Error: {error}</p>
       ) : kanjiDetailsData ? (
@@ -91,7 +97,6 @@ const KanjiDetails = () => {
               <Kanji>{encodedCharacter}</Kanji>
             </KanjiContainer>
           </GradeAndKanjiWrapper>
-
           <KanjiDetailsDataContainer>
             {kanjiDetailsData.jlpt && (
               <JLPText>JLPT N{kanjiDetailsData.jlpt}</JLPText>
@@ -129,10 +134,13 @@ const KanjiDetails = () => {
             .slice(0, 100)
             .map((variant, index) => (
               <WordContainer key={index}>
-                <p>Written: {variant.written}</p>
-                <p>Pronounced: {variant.pronounced}</p>
+                <DICTIONARYKANJI>{encodedCharacter}</DICTIONARYKANJI>
+                <DictionaryWord>{variant.written}</DictionaryWord>
+                <WordReading>{variant.pronounced}</WordReading>
                 {variant.meanings.map((meaning, i) => (
-                  <p key={i}>Meanings: {meaning.glosses.join(", ")}</p>
+                  <WordMeaning key={i}>
+                    {meaning.glosses.join(", ")}
+                  </WordMeaning>
                 ))}
               </WordContainer>
             ))}

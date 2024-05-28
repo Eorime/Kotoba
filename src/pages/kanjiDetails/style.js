@@ -61,7 +61,7 @@ export const JLPText = styled.h3`
 `;
 
 export const Text = styled.p`
-  font-size: 24px;
+  font-size: 26px;
   max-width: 450px;
   overflow-wrap: break-word;
   word-wrap: break-word;
@@ -99,12 +99,52 @@ export const WordsHeader = styled.h1`
 export const WordsContainer = styled.div`
   display: flex;
   flex-direction: row;
-  flex-wrap: wrap;
+  flex-wrap: nowrap;
+  padding-left: 15.5%;
 `;
 
 export const WordContainer = styled.div`
   border: solid 1px black;
-  width: 500px;
-  margin-right: 200px;
+  width: 800px;
+  height: 500px;
+  margin-right: 100px;
   border-radius: 10px;
+  flex-shrink: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-left: 80px;
+  padding-right: 80px;
+`;
+
+export const DICTIONARYKANJI = styled.h1`
+  font-size: 400px;
+  position: absolute;
+  z-index: -1;
+  color: #c7dfd4;
+`;
+
+export const DictionaryWord = styled.p`
+  font-size: 80px;
+  margin-top: 5px;
+`;
+
+export const WordReading = styled.p`
+  font-size: 50px;
+  margin-top: -20px;
+`;
+
+export const WordMeaning = styled.p`
+  font-size: 40px;
+  margin-top: -20px;
+`;
+
+export const KOTOBA = styled.h1`
+  position: absolute;
+  right: 3%;
+  top: -30%;
+  color: #c7dfd4;
+  font-size: 500px;
+  z-index: -1;
 `;
