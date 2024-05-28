@@ -1,6 +1,12 @@
 import React, { useEffect, useState } from "react";
 import { fetchData } from "../../api";
-import { AllContainer, Container, ContainerAllKanji, Kanji } from "./style";
+import {
+  AllContainer,
+  Container,
+  ContainerAllKanji,
+  KANJI,
+  Kanji,
+} from "./style";
 import { Spinner } from "../../GlobalStyle";
 import Navbar from "../../components/navbar/Navbar";
 import { useNavigate } from "react-router-dom";
@@ -47,6 +53,7 @@ const AllKanji = () => {
   return (
     <Container>
       <Navbar />
+      <KANJI>漢字</KANJI>
       {loading ? (
         <Spinner color={"#ef1548"} size={100} />
       ) : (

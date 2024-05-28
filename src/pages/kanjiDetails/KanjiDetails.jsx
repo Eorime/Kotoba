@@ -9,9 +9,10 @@ import {
   KanjiContainer,
   KanjiDetailsDataContainer,
   Text,
-  Wrapper,
   GradeAndKanjiWrapper,
   BackButton,
+  WordsHeader,
+  WordContainer,
 } from "./style";
 import { fetchData } from "../../api";
 import { useNavigate, useParams } from "react-router-dom";
@@ -111,6 +112,7 @@ const KanjiDetails = () => {
       ) : (
         <p>No data for this kanji</p>
       )}
+      <WordsHeader>WORDS</WordsHeader>
       {words &&
         words.length > 0 &&
         words
@@ -122,15 +124,15 @@ const KanjiDetails = () => {
                 meanings: item.meanings,
               }))
           )
-          .slice(0, 20)
+          .slice(0, 100)
           .map((variant, index) => (
-            <div key={index} style={{ marginBottom: "20px" }}>
+            <WordContainer key={index}>
               <p>Written: {variant.written}</p>
               <p>Pronounced: {variant.pronounced}</p>
               {variant.meanings.map((meaning, i) => (
                 <p key={i}>Meanings: {meaning.glosses.join(", ")}</p>
               ))}
-            </div>
+            </WordContainer>
           ))}
     </Container>
   );

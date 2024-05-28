@@ -42,3 +42,12 @@ export const GroupContainer = styled.div``;
 export const GroupButton = styled.button`
   ${buttonStyles}
 `;
+
+export const KANJI = styled.h1`
+  position: absolute;
+  left: 3%;
+  top: 8%;
+  color: #f8cfcf;
+  font-size: 500px;
+  z-index: -1;
+`;

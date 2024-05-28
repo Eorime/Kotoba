@@ -62,14 +62,14 @@ export const JLPText = styled.h3`
 
 export const Text = styled.p`
   font-size: 24px;
-  max-width: 500px;
+  max-width: 450px;
   overflow-wrap: break-word;
   word-wrap: break-word;
   white-space: normal;
 `;
 
 export const BackButton = styled.button`
-  position: fixed;
+  position: absolute;
   border: none;
   background-color: transparent;
   font-size: 50px;
@@ -86,3 +86,16 @@ export const BackButton = styled.button`
     cursor: pointer;
   }
 `;
+
+export const WordsHeader = styled.h1`
+  position: relative;
+  margin-top: 10%;
+  font-size: 50px;
+  font-weight: bold;
+  left: 15.5%;
+  color: #313131;
+`;
+
+export const WordContainer = styled.div``;
+
+export const CarouselContainer = styled.div``;

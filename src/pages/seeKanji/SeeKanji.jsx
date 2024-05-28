@@ -9,6 +9,8 @@ import {
   GradeContainer,
   GroupButton,
   GroupContainer,
+  KANJI,
+  KOTOBA,
 } from "./style";
 
 const SeeKanji = () => {
@@ -33,6 +35,7 @@ const SeeKanji = () => {
   return (
     <Container>
       <Navbar />
+      <KANJI>漢字</KANJI>
       <ButtonsContainer>
         <GradeContainer>
           {buttonArray.map((grade) => (

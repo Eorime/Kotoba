@@ -1,11 +1,12 @@
 import React from "react";
-import { Container } from "./style";
+import { Container, RESOURCES } from "./style";
 import Navbar from "../../components/navbar/Navbar";
 
 const Resources = () => {
   return (
     <Container>
       <Navbar />
+      <RESOURCES>リソース</RESOURCES>
     </Container>
   );
 };
