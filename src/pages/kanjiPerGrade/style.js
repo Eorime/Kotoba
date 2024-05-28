@@ -3,7 +3,7 @@ import styled from "styled-components";
 export const Container = styled.div``;
 
 export const AllGradeContainer = styled.div`
-  margin-left: 13%;
+  margin-left: 13.5%;
   border: 1px solid black;
   border-radius: 12px;
   margin-right: 12%;
@@ -14,7 +14,7 @@ export const GradeContainer = styled.div`
   display: flex;
   flex-direction: row;
   margin-top: 2%;
-  margin-left: 2%;
+  margin-left: 1%;
   margin-bottom: 4%;
 `;
 

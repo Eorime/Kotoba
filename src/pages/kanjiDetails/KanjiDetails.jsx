@@ -13,6 +13,7 @@ import {
   BackButton,
   WordsHeader,
   WordContainer,
+  WordsContainer,
 } from "./style";
 import { fetchData } from "../../api";
 import { useNavigate, useParams } from "react-router-dom";
@@ -112,28 +113,30 @@ const KanjiDetails = () => {
       ) : (
         <p>No data for this kanji</p>
       )}
-      <WordsHeader>WORDS</WordsHeader>
-      {words &&
-        words.length > 0 &&
-        words
-          .flatMap((item) =>
-            item.variants
-              .filter((variant) => variant.pronounced)
-              .map((variant) => ({
-                ...variant,
-                meanings: item.meanings,
-              }))
-          )
-          .slice(0, 100)
-          .map((variant, index) => (
-            <WordContainer key={index}>
-              <p>Written: {variant.written}</p>
-              <p>Pronounced: {variant.pronounced}</p>
-              {variant.meanings.map((meaning, i) => (
-                <p key={i}>Meanings: {meaning.glosses.join(", ")}</p>
-              ))}
-            </WordContainer>
-          ))}
+      {words && words.length > 0 && <WordsHeader>WORDS</WordsHeader>}
+      <WordsContainer>
+        {words &&
+          words.length > 0 &&
+          words
+            .flatMap((item) =>
+              item.variants
+                .filter((variant) => variant.pronounced)
+                .map((variant) => ({
+                  ...variant,
+                  meanings: item.meanings,
+                }))
+            )
+            .slice(0, 100)
+            .map((variant, index) => (
+              <WordContainer key={index}>
+                <p>Written: {variant.written}</p>
+                <p>Pronounced: {variant.pronounced}</p>
+                {variant.meanings.map((meaning, i) => (
+                  <p key={i}>Meanings: {meaning.glosses.join(", ")}</p>
+                ))}
+              </WordContainer>
+            ))}
+      </WordsContainer>
     </Container>
   );
 };

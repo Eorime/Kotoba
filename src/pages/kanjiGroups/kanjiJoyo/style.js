@@ -14,7 +14,7 @@ export const JoyoContainer = styled.div`
   display: flex;
   flex-direction: row;
   margin-top: 2%;
-  margin-left: 2%;
+  margin-left: 1%;
   margin-bottom: 4%;
 `;
 

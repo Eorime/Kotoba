@@ -96,6 +96,15 @@ export const WordsHeader = styled.h1`
   color: #313131;
 `;
 
-export const WordContainer = styled.div``;
+export const WordsContainer = styled.div`
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+`;
 
-export const CarouselContainer = styled.div``;
+export const WordContainer = styled.div`
+  border: solid 1px black;
+  width: 500px;
+  margin-right: 200px;
+  border-radius: 10px;
+`;
