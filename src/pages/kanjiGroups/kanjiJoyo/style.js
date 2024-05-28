@@ -29,3 +29,12 @@ export const Kanji = styled.div`
     color: #d7717f;
   }
 `;
+
+export const JoyoTitle = styled.h1`
+  font-size: 50px;
+  color: #313131;
+  margin-left: 13%;
+  margin-top: 7%;
+`;
+
+export const JoyoText = styled.p``;

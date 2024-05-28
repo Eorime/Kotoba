@@ -6,6 +6,7 @@ import {
   AllJinmeyoContainer,
   Container,
   JinmeyoContainer,
+  JinmeyoTitle,
   Kanji,
 } from "./style";
 import { useNavigate } from "react-router-dom";
@@ -69,7 +70,7 @@ const JinmeyoKanji = () => {
           ))}
         </AllJinmeyoContainer>
       )}
-      {jinmeyoData && <p>Length: {jinmeyoData.length}</p>}
+      <JinmeyoTitle>What are the Jinmeiyō Kanji?</JinmeyoTitle>
     </Container>
   );
 };

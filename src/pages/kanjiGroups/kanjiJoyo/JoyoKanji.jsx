@@ -2,7 +2,13 @@ import React, { useEffect, useState } from "react";
 import { fetchData } from "../../../api";
 import { Spinner } from "../../../GlobalStyle";
 import SeeKanji from "../../seeKanji/SeeKanji";
-import { AllJoyoContainer, Container, JoyoContainer, Kanji } from "./style";
+import {
+  AllJoyoContainer,
+  Container,
+  JoyoContainer,
+  JoyoTitle,
+  Kanji,
+} from "./style";
 import { useNavigate } from "react-router-dom";
 
 const JoyoKanji = () => {
@@ -59,7 +65,7 @@ const JoyoKanji = () => {
           ))}
         </AllJoyoContainer>
       )}
-      {joyoData && <p>Length: {joyoData.length}</p>}
+      <JoyoTitle>What are the Jōyō Kanji?</JoyoTitle>
     </Container>
   );
 };
