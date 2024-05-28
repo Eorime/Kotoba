@@ -2,6 +2,15 @@ import styled from "styled-components";
 
 export const Container = styled.div``;
 
+export const GradeAndKanjiWrapper = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  margin-top: 5%;
+  margin-left: -30%;
+`;
+
 export const KanjiContainer = styled.div`
   background-color: #f1e7db;
   border: 1px solid black;
@@ -9,30 +18,28 @@ export const KanjiContainer = styled.div`
   width: 250px;
   height: 250px;
   display: flex;
-  margin-left: 27%;
-  margin-top: 5%;
   justify-content: center;
   align-items: center;
 `;
 
 export const Kanji = styled.p`
-  font-size: 150px;
-  font-weight: bold;
-  color: transparent;
-  -webkit-text-stroke-width: 2px;
+  font-size: 160px;
+  -webkit-text-stroke-width: 1.7px;
   -webkit-text-stroke-color: black;
   color: #3cc3bf;
 `;
 
 export const KanjiDetailsDataContainer = styled.div`
-  margin-left: 48%;
+  text-align: left;
+  position: absolute;
   margin-top: -14%;
+  margin-left: 48%;
 `;
 
 export const GradeParagraph = styled.p`
   color: black;
   font-size: 22px;
-  margin-top: 65px;
+  margin-top: 60px;
 `;
 
 export const GradeContainer = styled.div`
@@ -44,10 +51,9 @@ export const GradeContainer = styled.div`
   width: 100px;
   border: solid 1px black;
   border-radius: 12px;
-  margin-left: 30.8%;
-  margin-top: 11%;
   position: absolute;
   z-index: -1;
+  top: 210px;
 `;
 
 export const JLPText = styled.h3`
@@ -60,4 +66,23 @@ export const Text = styled.p`
   overflow-wrap: break-word;
   word-wrap: break-word;
   white-space: normal;
+`;
+
+export const BackButton = styled.button`
+  position: fixed;
+  border: none;
+  background-color: transparent;
+  font-size: 50px;
+  left: 15%;
+  top: 20%;
+  font-weight: bold;
+  -webkit-text-stroke-width: 1.7px;
+  -webkit-text-stroke-color: black;
+  color: #3cc3bf;
+  z-index: 1;
+
+  &: hover {
+    color: #13dbd5;
+    cursor: pointer;
+  }
 `;

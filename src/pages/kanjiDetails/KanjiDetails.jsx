@@ -9,9 +9,12 @@ import {
   KanjiContainer,
   KanjiDetailsDataContainer,
   Text,
+  Wrapper,
+  GradeAndKanjiWrapper,
+  BackButton,
 } from "./style";
 import { fetchData } from "../../api";
-import { useParams } from "react-router-dom";
+import { useNavigate, useParams } from "react-router-dom";
 import { Spinner } from "../../GlobalStyle";
 import Navbar from "../../components/navbar/Navbar";
 
@@ -21,6 +24,12 @@ const KanjiDetails = () => {
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState("");
   const [words, setWords] = useState(null);
+
+  const navigate = useNavigate();
+
+  const handleBackButton = () => {
+    navigate(-1);
+  };
 
   useEffect(() => {
     const fetchDetails = async () => {
@@ -62,48 +71,43 @@ const KanjiDetails = () => {
 
   return (
     <Container>
+      <BackButton onClick={handleBackButton}>🢀</BackButton>
       <Navbar />
       {loading ? (
         <Spinner color="#ef1548" size={100} />
       ) : error ? (
         <p>Error: {error}</p>
       ) : kanjiDetailsData ? (
-        <div>
-          {kanjiDetailsData && kanjiDetailsData.grade && (
-            <GradeContainer>
-              <GradeParagraph>
-                Grade {""}
-                {kanjiDetailsData.grade}
-              </GradeParagraph>
-            </GradeContainer>
-          )}
-          <KanjiContainer>
-            <Kanji>{encodedCharacter}</Kanji>
-          </KanjiContainer>
+        <>
+          <GradeAndKanjiWrapper>
+            {kanjiDetailsData.grade && (
+              <GradeContainer>
+                <GradeParagraph>Grade {kanjiDetailsData.grade}</GradeParagraph>
+              </GradeContainer>
+            )}
+            <KanjiContainer>
+              <Kanji>{encodedCharacter}</Kanji>
+            </KanjiContainer>
+          </GradeAndKanjiWrapper>
 
           <KanjiDetailsDataContainer>
-            {kanjiDetailsData && kanjiDetailsData.jlpt && (
-              <JLPText> JLPT N{kanjiDetailsData.jlpt}</JLPText>
+            {kanjiDetailsData.jlpt && (
+              <JLPText>JLPT N{kanjiDetailsData.jlpt}</JLPText>
             )}
             <Text>Meanings: {kanjiDetailsData.meanings.join(", ")}</Text>
-            {kanjiDetailsData &&
-              kanjiDetailsData.kun_readings &&
-              kanjiDetailsData.kun_readings.length > 0 && (
-                <Text>
-                  Kun Readings: {kanjiDetailsData.kun_readings.join(", ")}
-                </Text>
-              )}
-            {kanjiDetailsData &&
-              kanjiDetailsData.on_readings &&
-              kanjiDetailsData.on_readings.length > 0 && (
-                <Text>
-                  On Readings: {kanjiDetailsData.on_readings.join(", ")}
-                </Text>
-              )}
-
+            {kanjiDetailsData.kun_readings.length > 0 && (
+              <Text>
+                Kun Readings: {kanjiDetailsData.kun_readings.join(", ")}
+              </Text>
+            )}
+            {kanjiDetailsData.on_readings.length > 0 && (
+              <Text>
+                On Readings: {kanjiDetailsData.on_readings.join(", ")}
+              </Text>
+            )}
             <Text>Strokes: {kanjiDetailsData.stroke_count}</Text>
           </KanjiDetailsDataContainer>
-        </div>
+        </>
       ) : (
         <p>No data for this kanji</p>
       )}

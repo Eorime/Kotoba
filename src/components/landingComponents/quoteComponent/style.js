@@ -20,15 +20,19 @@ export const Container = styled.div`
   justify-content: center;
 `;
 
+export const QuoteWrapper = styled.div`
+  position: relative;
+`;
+
 export const QuoteContainer = styled.div`
   background-color: #ef154860;
   border: solid 3px #302e2c;
   border-radius: 15px;
-  width: 70%;
+  width: 100%;
   height: 50%;
   align-self: center;
-  margin-left: 65px;
-  margin-top: -30px;
+  margin-left: 15px;
+  margin-top: 180px;
 `;
 
 export const Quote = styled.h6`
@@ -36,7 +40,6 @@ export const Quote = styled.h6`
   font-size: 52px;
   margin-left: 70px;
   margin-right: 10px;
-  margin-top: 90px;
 `;
 
 export const Translation = styled.h3`
@@ -53,7 +56,7 @@ export const SpinContainer = styled.div`
   height: 90px;
   background-color: #f1e7db;
   position: absolute;
-  left: 270px;
+  left: -25px;
   top: 150px;
   display: flex;
   justify-content: center;
