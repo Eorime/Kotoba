@@ -82,7 +82,7 @@ const KanjiDetails = () => {
       <Navbar />
       <KOTOBA>言葉</KOTOBA>
       {loading ? (
-        <Spinner color="#b7dcd1" size={100} />
+        <Spinner color="#3cc3bf" size={100} />
       ) : error ? (
         <p>Error: {error}</p>
       ) : kanjiDetailsData ? (

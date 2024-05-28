@@ -32,7 +32,7 @@ export const Kanji = styled.p`
 export const KanjiDetailsDataContainer = styled.div`
   text-align: left;
   position: absolute;
-  margin-top: -14%;
+  margin-top: -15%;
   margin-left: 48%;
 `;
 
@@ -66,6 +66,7 @@ export const Text = styled.p`
   overflow-wrap: break-word;
   word-wrap: break-word;
   white-space: normal;
+  font-weight: 550;
 `;
 
 export const BackButton = styled.button`
@@ -122,7 +123,7 @@ export const DICTIONARYKANJI = styled.h1`
   font-size: 400px;
   position: absolute;
   z-index: -1;
-  color: #c7dfd4;
+  color: #cbe0d5;
 `;
 
 export const DictionaryWord = styled.p`
@@ -143,8 +144,8 @@ export const WordMeaning = styled.p`
 export const KOTOBA = styled.h1`
   position: absolute;
   right: 3%;
-  top: -30%;
-  color: #c7dfd4;
+  top: -35%;
+  color: #cbe0d5;
   font-size: 500px;
   z-index: -1;
 `;

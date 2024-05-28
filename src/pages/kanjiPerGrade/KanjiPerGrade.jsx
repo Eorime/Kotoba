@@ -75,7 +75,6 @@ const KanjiPerGrade = () => {
           </AllGradeContainer>
         )
       )}
-      {gradeKanjiData.length}
     </Container>
   );
 };

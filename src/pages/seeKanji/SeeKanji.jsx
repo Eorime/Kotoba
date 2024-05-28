@@ -10,7 +10,6 @@ import {
   GroupButton,
   GroupContainer,
   KANJI,
-  KOTOBA,
 } from "./style";
 
 const SeeKanji = () => {
