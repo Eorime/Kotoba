@@ -37,4 +37,6 @@ export const JinmeyoTitle = styled.h1`
   margin-top: 7%;
 `;
 
+export const TextContainer = styled.div``;
+
 export const JinmeyoText = styled.p``;
