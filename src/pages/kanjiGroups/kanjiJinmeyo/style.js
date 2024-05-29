@@ -37,6 +37,11 @@ export const JinmeyoTitle = styled.h1`
   margin-top: 7%;
 `;
 
-export const TextContainer = styled.div``;
+export const TextContainer = styled.div`
+  margin-left: 13.5%;
+  margin-right: 12%;
+`;
 
-export const JinmeyoText = styled.p``;
+export const JinmeyoText = styled.p`
+  font-size: 28px;
+`;

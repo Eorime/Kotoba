@@ -80,20 +80,24 @@ const JinmeyoKanji = () => {
           list includes around 863 kanji characters and was first introduced in
           1981, with revisions in 2004 and 2010. The Jinmeyo Kanji list serves a
           specific purpose: to provide a wider range of kanji characters that
-          can be used in naming Japanese individuals. While the Joyo Kanji list
-          focuses on kanji characters used in general writing and communication,
-          the Jinmeyo Kanji list allows for more variety and cultural
-          significance in personal names. The Jinmeyo Kanji list includes kanji
-          characters with desirable meanings, such as those related to virtues,
-          nature, or positive attributes. It also includes some uncommon kanji
-          characters that are not part of the Joyo Kanji list but hold cultural
-          or historical significance in naming traditions. Furthermore, the
-          Jinmeyo Kanji list contains some kanji characters that were once part
-          of the Joyo Kanji list but were later removed due to changes in usage
-          or relevance. These kanji characters may still be used in personal
-          names, even though they are no longer considered part of the standard
-          set for general use. It's important to note that while the Joyo Kanji
-          and Jinmeyo Kanji lists are separate, there is a significant overlap
+          can be used in naming Japanese individuals.{" "}
+          <JinmeyoText>
+            While the Joyo Kanji list focuses on kanji characters used in
+            general writing and communication, the Jinmeyo Kanji list allows for
+            more variety and cultural significance in personal names. The
+            Jinmeyo Kanji list includes kanji characters with desirable
+            meanings, such as those related to virtues, nature, or positive
+            attributes. It also includes some uncommon kanji characters that are
+            not part of the Joyo Kanji list but hold cultural or historical
+            significance in naming traditions. Furthermore, the Jinmeyo Kanji
+            list contains some kanji characters that were once part of the Joyo
+            Kanji list but were later removed due to changes in usage or
+            relevance.
+          </JinmeyoText>{" "}
+          These kanji characters may still be used in personal names, even
+          though they are no longer considered part of the standard set for
+          general use. It's important to note that while the Joyo Kanji and
+          Jinmeyo Kanji lists are separate, there is a significant overlap
           between them. Many of the kanji characters used in personal names are
           also part of the Joyo Kanji list, as they are commonly used in general
           writing as well.

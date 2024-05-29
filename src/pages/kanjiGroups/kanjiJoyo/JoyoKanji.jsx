@@ -76,23 +76,27 @@ const JoyoKanji = () => {
           major update in 2010 to better match the kanji people commonly use
           today. The Joyo Kanji list is organized by grade levels, with each
           grade adding new kanji characters for students to learn as they move
-          through their schooling, from elementary to high school. The Joyo
-          Kanji list is meant to help students learn kanji in a structured way,
-          building up their knowledge step by step. The kanji in this list are
-          picked based on how often they appear and how useful they are in daily
-          life. Learning these kanji is important for Japanese students, not
-          just for school, but also for getting by in everyday life. This list
-          covers a wide range of kanji used in different places like books,
-          newspapers, magazines, textbooks, and official documents. For people
-          learning Japanese as a second language, knowing these kanji is key to
-          becoming literate and fluent. The Joyo Kanji list is a helpful guide
-          for both native speakers and learners of Japanese, showing them which
-          kanji they need to know. Besides its use in education, the Joyo Kanji
-          list helps keep written Japanese consistent and clear. By setting a
-          standard set of kanji that everyone recognizes, the list makes sure
-          that written communication is understandable across different media
-          and platforms. This is especially important in official documents and
-          formal writing, where clear communication is crucial.
+          through their schooling, from elementary to high school.{" "}
+          <JoyoText>
+            The Joyo Kanji list is meant to help students learn kanji in a
+            structured way, building up their knowledge step by step. The kanji
+            in this list are picked based on how often they appear and how
+            useful they are in daily life. Learning these kanji is important for
+            Japanese students, not just for school, but also for getting by in
+            everyday life. This list covers a wide range of kanji used in
+            different places like books, newspapers, magazines, textbooks, and
+            official documents. For people learning Japanese as a second
+            language, knowing these kanji is key to becoming literate and
+            fluent. The Joyo Kanji list is a helpful guide for both native
+            speakers and learners of Japanese, showing them which kanji they
+            need to know.
+          </JoyoText>{" "}
+          Besides its use in education, the Joyo Kanji list helps keep written
+          Japanese consistent and clear. By setting a standard set of kanji that
+          everyone recognizes, the list makes sure that written communication is
+          understandable across different media and platforms. This is
+          especially important in official documents and formal writing, where
+          clear communication is crucial.
         </JoyoText>
       </TextContainer>
     </Container>
