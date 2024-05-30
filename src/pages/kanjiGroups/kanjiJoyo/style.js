@@ -40,6 +40,7 @@ export const JoyoTitle = styled.h1`
 export const TextContainer = styled.div`
   margin-left: 13.5%;
   margin-right: 12%;
+  margin-bottom: 100px;
 `;
 
 export const JoyoText = styled.p`

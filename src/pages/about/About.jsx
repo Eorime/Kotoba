@@ -15,7 +15,7 @@ const About = () => {
   return (
     <Container>
       <Navbar />
-      <AboutTitle>What is KOTOBA?</AboutTitle>
+      <AboutTitle>What is KOTOBA? 🌸</AboutTitle>
       <TextContainer>
         <Text>
           As a lifelong language lover, the world of kanji has always captivated
@@ -27,11 +27,12 @@ const About = () => {
           learners, KOTOBA aims to be a helpful companion on one's journey to
           kanji mastery. KOTOBA uses{" "}
           <Link
-            to="/https://kanjiapi.dev"
+            as="a"
+            href="https://kanjiapi.dev"
             target="_blank"
             style={{ textDecoration: "none", color: "inherit" }}
           >
-            <strong> kanjiapi.dev</strong>
+            <strong>kanjiapi.dev</strong>
           </Link>{" "}
           as its main data source to display all available kanji characters.
         </Text>

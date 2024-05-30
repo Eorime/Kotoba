@@ -16,7 +16,7 @@ const Resources = () => {
   return (
     <Container>
       <Navbar />
-      <ResourcesTitle>Resources for self-study</ResourcesTitle>
+      <ResourcesTitle>Resources for self-study 🌸</ResourcesTitle>
       <ResourcesContainer>
         <ResourceContainer>
           <ResourceNameContainer>

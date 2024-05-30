@@ -103,6 +103,23 @@ export const WordsContainer = styled.div`
   flex-wrap: nowrap;
   padding-left: 15.5%;
   margin-bottom: 100px;
+  overflow-x: auto;
+  overflow-y: hidden;
+  scroll-snap-type: x mandatory;
+  max-width: 80vw;
+  margin-left: 17%;
+  margin-bottom: 10%;
+  padding-left: 10px;
+
+  &::-webkit-scrollbar-thumb {
+    background-color: rgba(0, 0, 0, 0.2);
+    border-radius: 5px;
+    width: 5px;
+  }
+
+  &::-webkit-scrollbar {
+    height: 10px;
+  }
 `;
 
 export const WordContainer = styled.div`
@@ -118,6 +135,7 @@ export const WordContainer = styled.div`
   align-items: center;
   padding-left: 80px;
   padding-right: 80px;
+  margin-bottom: 50px;
 `;
 
 export const DICTIONARYKANJI = styled.h1`
@@ -128,12 +146,12 @@ export const DICTIONARYKANJI = styled.h1`
 `;
 
 export const DictionaryWord = styled.p`
-  font-size: 80px;
+  font-size: 60px;
   margin-top: 5px;
 `;
 
 export const WordReading = styled.p`
-  font-size: 50px;
+  font-size: 40px;
   margin-top: -20px;
 `;
 
