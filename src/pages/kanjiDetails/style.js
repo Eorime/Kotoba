@@ -102,6 +102,7 @@ export const WordsContainer = styled.div`
   flex-direction: row;
   flex-wrap: nowrap;
   padding-left: 15.5%;
+  margin-bottom: 100px;
 `;
 
 export const WordContainer = styled.div`

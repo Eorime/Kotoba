@@ -2,10 +2,13 @@ import React, { useEffect, useState } from "react";
 import { fetchData } from "../../api";
 import {
   AllContainer,
+  AllKanjiHeader,
+  AllKanjiText,
   Container,
   ContainerAllKanji,
   KANJI,
   Kanji,
+  TextContainer,
 } from "./style";
 import { Spinner } from "../../GlobalStyle";
 import Navbar from "../../components/navbar/Navbar";
@@ -69,6 +72,18 @@ const AllKanji = () => {
           ))}
         </ContainerAllKanji>
       )}
+      <AllKanjiHeader>All available Kanji</AllKanjiHeader>
+      <TextContainer>
+        <AllKanjiText>
+          Presented above is the comprehensive list of all available Kanji
+          characters, encompassing an impressive total of 13,000. This extensive
+          collection showcases the vast richness and complexity of the Kanji
+          script. However, please note that this list includes only the meanings
+          and stroke counts of the characters. Unlike the graded Kanji lists, it
+          does not provide associated words, grades, JLPT levels, or the kunyomi
+          and onyomi readings.
+        </AllKanjiText>
+      </TextContainer>
     </Container>
   );
 };

@@ -45,7 +45,7 @@ const Footer = () => {
           JLPT Study
         </ResourceLink>
         <ResourceLink href="https://www.japanesepod101.com" target="_blank">
-          Japanese POD
+          JapanesePod101
         </ResourceLink>
       </ResourceContainer>
       <ContactContainer>

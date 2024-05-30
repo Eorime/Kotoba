@@ -40,3 +40,19 @@ export const KANJI = styled.h1`
   font-size: 500px;
   z-index: -1;
 `;
+
+export const AllKanjiHeader = styled.h1`
+  font-size: 50px;
+  color: #313131;
+  margin-left: 13%;
+  margin-top: 7%;
+`;
+
+export const TextContainer = styled.div`
+  margin-left: 13.5%;
+  margin-right: 12%;
+`;
+
+export const AllKanjiText = styled.p`
+  font-size: 28px;
+`;
