@@ -39,12 +39,17 @@ export const ResourceContainer = styled.div`
 export const ResourcesTitle = styled.p`
   font-size: 28px;
   color: white;
+  margin-bottom: 5px;
 `;
 
-export const ResourceLink = styled(Link)`
+export const ResourceLink = styled.a`
   text-decoration: none;
   color: white;
   margin-top: 20px;
+
+  &: hover {
+    cursor: pointer;
+  }
 `;
 
 export const ContactContainer = styled.div`
@@ -63,4 +68,10 @@ export const ContactLink = styled(Link)`
   text-decoration: none;
   color: white;
   margin-top: 20px;
+`;
+
+export const GithubLogo = styled.img`
+  width: 40px;
+  margin-top: 2%;
+  margin-left: 1%;
 `;
