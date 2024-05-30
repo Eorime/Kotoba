@@ -3,15 +3,21 @@ import styled from "styled-components";
 export const Container = styled.div``;
 
 export const ContainerAllKanji = styled.div`
-  margin-top: 50px;
+  margin-left: 13.5%;
+  border: 1px solid black;
+  border-radius: 12px;
+  margin-right: 12%;
+  padding: 20px;
+  margin-top: 65px;
 `;
 
 export const AllContainer = styled.div`
   display: flex;
   flex-direction: row;
   font-size: 20px;
-  margin-left: 15%;
-  margin-top: 40px;
+  margin-left: 1%;
+  margin-bottom: 2.5%;
+  margin-top: 2.5%;
 `;
 
 export const Kanji = styled.div`
