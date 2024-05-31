@@ -11,7 +11,7 @@ export const ABOUT = styled.h1`
   z-index: -1;
 
   @media screen and (max-width: 1550px) {
-    font-size: 300px; q
+    font-size: 300px; 
 `;
 
 export const AboutTitle = styled.h1`
@@ -19,6 +19,9 @@ export const AboutTitle = styled.h1`
   color: #313131;
   margin-top: 3%;
   font-size: 50px;
+
+  @media screen and (max-width: 1550px) {
+    font-size: 35px; 
 `;
 
 export const TextContainer = styled.div`
@@ -33,6 +36,9 @@ export const TextContainer = styled.div`
 
 export const Text = styled.p`
   font-size: 28px;
+
+  @media screen and (max-width: 1550px) {
+    font-size: 18px; 
 `;
 
 export const ReasonsTextContainer = styled.div`
@@ -55,4 +61,9 @@ export const GoalTextContainer = styled.div`
   padding-left: 20px;
   padding-right: 20px;
   border-radius: 12px;
+
+  @media screen and (max-width: 1550px) {
+    margin-top: -15.6%;
+
+    
 `;

@@ -12,6 +12,7 @@ export const RESOURCES = styled.h1`
 
   @media screen and (max-width: 1550px) {
     font-size: 300px;
+    top: 28%;
 `;
 
 export const ResourcesTitle = styled.h1`
@@ -19,6 +20,9 @@ export const ResourcesTitle = styled.h1`
   color: #313131;
   margin-top: 3%;
   font-size: 50px;
+
+  @media screen and (max-width: 1550px) {
+    font-size: 35px; 
 `;
 
 export const ResourcesContainer = styled.div`
@@ -29,6 +33,9 @@ export const ResourcesContainer = styled.div`
   margin-right: 5%;
   margin-bottom: 130px;
   margin-top: 4%;
+
+  @media screen and (max-width: 1550px) {
+    margin-left: 6%;
 `;
 
 export const ResourceContainer = styled.div`
@@ -40,6 +47,10 @@ export const ResourceContainer = styled.div`
   border-radius: 12px;
   width: 350px;
   height: 400px;
+
+  @media screen and (max-width: 1550px) {
+    width: 200px;
+  height: 250px;
 `;
 
 export const ResourceNameContainer = styled.div`
@@ -53,6 +64,9 @@ export const ResourceNameContainer = styled.div`
   &: hover {
     cursor: pointer;
   }
+
+  @media screen and (max-width: 1550px) {
+  margin-top: 90%;
 `;
 
 export const ResourceName = styled.h1`
@@ -62,4 +76,7 @@ export const ResourceName = styled.h1`
     cursor: pointer;
     color: #31a7a4;
   }
+
+  @media screen and (max-width: 1550px) {
+    font-size: 28px;
 `;

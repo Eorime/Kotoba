@@ -26,14 +26,15 @@ const About = () => {
           orders, meanings and associated words. From beginners to advanced
           learners, KOTOBA aims to be a helpful companion on one's journey to
           kanji mastery. KOTOBA uses{" "}
-          <Link
-            as="a"
+          <a
             href="https://kanjiapi.dev"
             target="_blank"
+            rel="noopener noreferrer"
             style={{ textDecoration: "none", color: "inherit" }}
           >
             <strong>kanjiapi.dev</strong>
-          </Link>{" "}
+          </a>{" "}
+          {""}
           as its main data source to display all available kanji characters.
         </Text>
       </TextContainer>
