@@ -25,6 +25,11 @@ export const TickerJapanese = styled.h1`
   animation: ${tickerScroll} 30s linear infinite;
   animation-fill-mode: both;
   color: #ef154860;
+
+  @media screen and (max-width: 1550px) {
+    font-size: 70px;
+    margin-top: 5px;
+  }
 `;
 
 export const TickerEnglish = styled.h6`
@@ -35,4 +40,10 @@ export const TickerEnglish = styled.h6`
   margin-bottom: 115px;
   animation: ${tickerScroll} 30s linear infinite;
   animation-fill-mode: both;
+
+  @media screen and (max-width: 1550px) {
+    font-size: 30px;
+    margin-top: 50px;
+    margin-bottom: 40px;
+  }
 `;
