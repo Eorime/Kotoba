@@ -135,6 +135,7 @@ export const WordContainer = styled.div`
   align-items: center;
   padding-left: 80px;
   padding-right: 80px;
+  position: relative;
   margin-bottom: 50px;
 `;
 

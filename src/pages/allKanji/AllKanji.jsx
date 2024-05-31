@@ -36,9 +36,7 @@ const AllKanji = () => {
     fetchAll();
   }, []);
 
-  useEffect(() => {
-    console.log(kanjiData);
-  }, [kanjiData]);
+  useEffect(() => {}, [kanjiData]);
 
   const sliced = kanjiData.slice(0, 140);
   const rowSize = 20;
