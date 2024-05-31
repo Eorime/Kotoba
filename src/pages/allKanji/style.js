@@ -9,6 +9,10 @@ export const ContainerAllKanji = styled.div`
   margin-right: 12%;
   padding: 20px;
   margin-top: 65px;
+
+  @media screen and (max-width: 1550px) {
+    margin-top: 35px;
+  }
 `;
 
 export const AllContainer = styled.div`
@@ -18,6 +22,10 @@ export const AllContainer = styled.div`
   margin-left: 1%;
   margin-bottom: 2.5%;
   margin-top: 2.5%;
+
+  @media screen and (max-width: 1550px) {
+    margin-top: 0.5%;
+    margin-bottom: 2%;
 `;
 
 export const Kanji = styled.div`
@@ -30,6 +38,10 @@ export const Kanji = styled.div`
     cursor: pointer;
     color: #d7717f;
   }
+
+  @media screen and (max-width: 1550px) {
+    font-size: 35px;
+    margin-right: 12px;
 `;
 
 export const KANJI = styled.h1`
@@ -49,6 +61,9 @@ export const AllKanjiHeader = styled.h1`
   color: #313131;
   margin-left: 13%;
   margin-top: 7%;
+
+  @media screen and (max-width: 1550px) {
+    font-size: 35px;
 `;
 
 export const TextContainer = styled.div`
@@ -59,6 +74,9 @@ export const TextContainer = styled.div`
 
 export const AllKanjiText = styled.p`
   font-size: 28px;
+
+  @media screen and (max-width: 1550px) {
+    font-size: 20px;
 `;
 
 export const PaginationContainer = styled.div`
@@ -81,5 +99,9 @@ export const PageNavButton = styled.button`
   &: hover {
     color: #f8bebf;
     cursor: pointer;
+  }
+
+  @media screen and (max-width: 1550px) {
+    font-size: 35px;
   }
 `;

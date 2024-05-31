@@ -82,8 +82,9 @@ export const PageNavButton = styled.button`
   &: hover {
     color: #f8bebf;
     cursor: pointer;
+  }
 
-    @media screen and (max-width: 1550px) {
-      font-size: 35px;
+  @media screen and (max-width: 1550px) {
+    font-size: 35px;
   }
 `;

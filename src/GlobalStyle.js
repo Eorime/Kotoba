@@ -6,4 +6,8 @@ export const Spinner = styled(PuffLoader)`
   margin-top: 20%;
   left: 50.5%;
   transform: translate(-50%, -50%);
+
+  @media screen and (max-width: 1550px) {
+    margin-top: 10%;
+  }
 `;

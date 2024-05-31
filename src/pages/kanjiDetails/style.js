@@ -20,6 +20,11 @@ export const KanjiContainer = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
+
+  @media screen and (max-width: 1550px) {
+    width: 200px;
+    height: 200px;
+  }
 `;
 
 export const Kanji = styled.p`
@@ -27,6 +32,10 @@ export const Kanji = styled.p`
   -webkit-text-stroke-width: 1.7px;
   -webkit-text-stroke-color: black;
   color: #3cc3bf;
+
+  @media screen and (max-width: 1550px) {
+    font-size: 100px;
+  }
 `;
 
 export const KanjiDetailsDataContainer = styled.div`
@@ -34,12 +43,21 @@ export const KanjiDetailsDataContainer = styled.div`
   position: absolute;
   margin-top: -15%;
   margin-left: 48%;
+
+  @media screen and (max-width: 1550px) {
+    margin-top: -16%;
+  }
 `;
 
 export const GradeParagraph = styled.p`
   color: black;
   font-size: 22px;
   margin-top: 60px;
+
+  @media screen and (max-width: 1550px) {
+    font-size: 18px;
+    margin-top: 50px;
+  }
 `;
 
 export const GradeContainer = styled.div`
@@ -54,10 +72,21 @@ export const GradeContainer = styled.div`
   position: absolute;
   z-index: -1;
   top: 210px;
+
+  @media screen and (max-width: 1550px) {
+    height: 70px;
+    width: 70px;
+    border-radius: 8px;
+    top: 175px;
+  }
 `;
 
 export const JLPText = styled.h3`
   font-size: 32px;
+
+  @media screen and (max-width: 1550px) {
+    font-size: 24px;
+  }
 `;
 
 export const Text = styled.p`
@@ -67,6 +96,10 @@ export const Text = styled.p`
   word-wrap: break-word;
   white-space: normal;
   font-weight: 550;
+
+  @media screen and (max-width: 1550px) {
+    font-size: 18px;
+  }
 `;
 
 export const BackButton = styled.button`
@@ -86,6 +119,10 @@ export const BackButton = styled.button`
     color: #13dbd5;
     cursor: pointer;
   }
+
+  @media screen and (max-width: 1550px) {
+    font-size: 35px;
+  }
 `;
 
 export const WordsHeader = styled.h1`
@@ -95,6 +132,10 @@ export const WordsHeader = styled.h1`
   font-weight: bold;
   left: 15.5%;
   color: #313131;
+
+  @media screen and (max-width: 1550px) {
+    font-size: 35px;
+  }
 `;
 
 export const WordsContainer = styled.div`
@@ -115,6 +156,10 @@ export const WordsContainer = styled.div`
     background-color: rgba(0, 0, 0, 0.2);
     border-radius: 5px;
     width: 5px;
+
+    &: hover {
+      cursor: pointer;
+    }
   }
 
   &::-webkit-scrollbar {
@@ -137,6 +182,11 @@ export const WordContainer = styled.div`
   padding-right: 80px;
   position: relative;
   margin-bottom: 50px;
+
+  @media screen and (max-width: 1550px) {
+    width: 400px;
+    height: 300px;
+  }
 `;
 
 export const DICTIONARYKANJI = styled.h1`
@@ -144,21 +194,37 @@ export const DICTIONARYKANJI = styled.h1`
   position: absolute;
   z-index: -1;
   color: #cbe0d5;
+
+  @media screen and (max-width: 1550px) {
+    font-size: 220px;
+  }
 `;
 
 export const DictionaryWord = styled.p`
   font-size: 60px;
   margin-top: 5px;
+
+  @media screen and (max-width: 1550px) {
+    font-size: 35px;
+  }
 `;
 
 export const WordReading = styled.p`
   font-size: 40px;
   margin-top: -20px;
+
+  @media screen and (max-width: 1550px) {
+    font-size: 20px;
+  }
 `;
 
 export const WordMeaning = styled.p`
   font-size: 40px;
   margin-top: -20px;
+
+  @media screen and (max-width: 1550px) {
+    font-size: 20px;
+  }
 `;
 
 export const KOTOBA = styled.h1`
