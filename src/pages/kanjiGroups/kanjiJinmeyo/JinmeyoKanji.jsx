@@ -9,16 +9,21 @@ import {
   JinmeyoText,
   JinmeyoTitle,
   Kanji,
+  PageNavButton,
+  PaginationContainer,
   TextContainer,
 } from "./style";
 import { useNavigate } from "react-router-dom";
 
 const JinmeyoKanji = () => {
-  const [jinmeyoData, setJinmeyoData] = useState();
+  const [jinmeyoData, setJinmeyoData] = useState([]);
   const [error, setError] = useState("");
   const [loading, setLoading] = useState(true);
 
   const navigate = useNavigate();
+
+  const kanjiPerPage = 100;
+  const [currentPage, setCurrentPage] = useState(1);
 
   useEffect(() => {
     const fetchJinmeyo = async () => {
@@ -37,16 +42,7 @@ const JinmeyoKanji = () => {
     fetchJinmeyo();
   }, []);
 
-  const jinmeyoSliced = jinmeyoData ? jinmeyoData.slice(0, 100) : [];
-  const jinmeyoRowSize = 20;
-  const jinmeyoKanjiRow = Array.from(
-    { length: Math.ceil(jinmeyoSliced.length / jinmeyoRowSize) },
-    (_, index) =>
-      jinmeyoSliced.slice(
-        index * jinmeyoRowSize,
-        index * jinmeyoRowSize + jinmeyoRowSize
-      )
-  );
+  const totalPages = Math.ceil(jinmeyoData.length / kanjiPerPage);
 
   const handleKanjiClick = (kanji) => {
     if (kanji) {
@@ -54,23 +50,66 @@ const JinmeyoKanji = () => {
     }
   };
 
+  const handleNextPage = () => {
+    if (currentPage < totalPages) {
+      setCurrentPage(currentPage + 1);
+    }
+  };
+
+  const handlePrevPage = () => {
+    if (currentPage > 1) {
+      setCurrentPage(currentPage - 1);
+    }
+  };
+
+  const startIndex = (currentPage - 1) * kanjiPerPage;
+  const currentKanjiData = jinmeyoData.slice(
+    startIndex,
+    startIndex + kanjiPerPage
+  );
+  const jinmeyoRowSize = 20;
+  const jinmeyoKanjiRow = Array.from(
+    { length: Math.ceil(currentKanjiData.length / jinmeyoRowSize) },
+    (_, index) =>
+      currentKanjiData.slice(
+        index * jinmeyoRowSize,
+        index * jinmeyoRowSize + jinmeyoRowSize
+      )
+  );
+
   return (
     <Container>
       <SeeKanji />
       {loading ? (
         <Spinner color="#ef1548" size={100} />
       ) : (
-        <AllJinmeyoContainer>
-          {jinmeyoKanjiRow.map((row, index) => (
-            <JinmeyoContainer key={index}>
-              {row.map((kanji, subIndex) => (
-                <Kanji key={subIndex} onClick={() => handleKanjiClick(kanji)}>
-                  {kanji}
-                </Kanji>
-              ))}
-            </JinmeyoContainer>
-          ))}
-        </AllJinmeyoContainer>
+        <>
+          <AllJinmeyoContainer>
+            {jinmeyoKanjiRow.map((row, index) => (
+              <JinmeyoContainer key={index}>
+                {row.map((kanji, subIndex) => (
+                  <Kanji key={subIndex} onClick={() => handleKanjiClick(kanji)}>
+                    {kanji}
+                  </Kanji>
+                ))}
+              </JinmeyoContainer>
+            ))}
+          </AllJinmeyoContainer>
+          <PaginationContainer>
+            <PageNavButton
+              onClick={handlePrevPage}
+              disabled={currentPage === 1}
+            >
+              🢀
+            </PageNavButton>
+            <PageNavButton
+              onClick={handleNextPage}
+              disabled={currentPage === totalPages}
+            >
+              🢂
+            </PageNavButton>
+          </PaginationContainer>
+        </>
       )}
       <JinmeyoTitle>What are the Jinmeiyō Kanji?</JinmeyoTitle>
       <TextContainer>
@@ -80,20 +119,21 @@ const JinmeyoKanji = () => {
           list includes around 863 kanji characters and was first introduced in
           1981, with revisions in 2004 and 2010. The Jinmeyo Kanji list serves a
           specific purpose: to provide a wider range of kanji characters that
-          can be used in naming Japanese individuals.{" "}
-          <JinmeyoText>
-            While the Joyo Kanji list focuses on kanji characters used in
-            general writing and communication, the Jinmeyo Kanji list allows for
-            more variety and cultural significance in personal names. The
-            Jinmeyo Kanji list includes kanji characters with desirable
-            meanings, such as those related to virtues, nature, or positive
-            attributes. It also includes some uncommon kanji characters that are
-            not part of the Joyo Kanji list but hold cultural or historical
-            significance in naming traditions. Furthermore, the Jinmeyo Kanji
-            list contains some kanji characters that were once part of the Joyo
-            Kanji list but were later removed due to changes in usage or
-            relevance.
-          </JinmeyoText>{" "}
+          can be used in naming Japanese individuals.
+        </JinmeyoText>
+        <JinmeyoText>
+          While the Joyo Kanji list focuses on kanji characters used in general
+          writing and communication, the Jinmeyo Kanji list allows for more
+          variety and cultural significance in personal names. The Jinmeyo Kanji
+          list includes kanji characters with desirable meanings, such as those
+          related to virtues, nature, or positive attributes. It also includes
+          some uncommon kanji characters that are not part of the Joyo Kanji
+          list but hold cultural or historical significance in naming
+          traditions. Furthermore, the Jinmeyo Kanji list contains some kanji
+          characters that were once part of the Joyo Kanji list but were later
+          removed due to changes in usage or relevance.
+        </JinmeyoText>
+        <JinmeyoText>
           These kanji characters may still be used in personal names, even
           though they are no longer considered part of the standard set for
           general use. It's important to note that while the Joyo Kanji and

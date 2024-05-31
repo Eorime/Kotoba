@@ -46,3 +46,26 @@ export const TextContainer = styled.div`
 export const JinmeyoText = styled.p`
   font-size: 28px;
 `;
+
+export const PaginationContainer = styled.div`
+  display: flex;
+  position: absolute;
+  right: 13.5%;
+  margin-top: 1.5%;
+`;
+
+export const PageNavButton = styled.button`
+  border: none;
+  background-color: transparent;
+  font-size: 50px;
+  margin-right: 15%;
+  font-weight: bold;
+  -webkit-text-stroke-width: 1.7px;
+  -webkit-text-stroke-color: black;
+  color: #e4acad;
+
+  &: hover {
+    color: #f8bebf;
+    cursor: pointer;
+  }
+`;

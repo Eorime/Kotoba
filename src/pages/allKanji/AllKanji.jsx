@@ -8,6 +8,8 @@ import {
   ContainerAllKanji,
   KANJI,
   Kanji,
+  PageNavButton,
+  PaginationContainer,
   TextContainer,
 } from "./style";
 import { Spinner } from "../../GlobalStyle";
@@ -20,6 +22,9 @@ const AllKanji = () => {
   const [loading, setLoading] = useState(true);
 
   const navigate = useNavigate();
+
+  const kanjiPerPage = 140;
+  const [currentPage, setCurrentPage] = useState(1);
 
   useEffect(() => {
     const fetchAll = async () => {
@@ -36,20 +41,38 @@ const AllKanji = () => {
     fetchAll();
   }, []);
 
-  useEffect(() => {}, [kanjiData]);
-
-  const sliced = kanjiData.slice(0, 140);
-  const rowSize = 20;
-  const kanjiRow = Array.from(
-    { length: Math.ceil(sliced.length / rowSize) },
-    (_, index) => sliced.slice(index * rowSize, index * rowSize + rowSize)
-  );
+  const totalPages = Math.ceil(kanjiData.length / kanjiPerPage);
 
   const handleKanjiClick = (kanji) => {
     if (kanji) {
       navigate(`/kanjiDetails/${kanji}`);
     }
   };
+
+  const handleNextPage = () => {
+    if (currentPage < totalPages) {
+      setCurrentPage(currentPage + 1);
+    }
+  };
+
+  const handlePrevPage = () => {
+    if (currentPage > 1) {
+      setCurrentPage(currentPage - 1);
+    }
+  };
+
+  const startIndex = (currentPage - 1) * kanjiPerPage;
+  const currentKanjiData = kanjiData.slice(
+    startIndex,
+    startIndex + kanjiPerPage
+  );
+
+  const rowSize = 20;
+  const kanjiRow = Array.from(
+    { length: Math.ceil(currentKanjiData.length / rowSize) },
+    (_, index) =>
+      currentKanjiData.slice(index * rowSize, index * rowSize + rowSize)
+  );
 
   return (
     <Container>
@@ -58,17 +81,33 @@ const AllKanji = () => {
       {loading ? (
         <Spinner color={"#ef1548"} size={100} />
       ) : (
-        <ContainerAllKanji>
-          {kanjiRow.map((row, rowIndex) => (
-            <AllContainer key={rowIndex}>
-              {row.map((kanji, index) => (
-                <Kanji key={index} onClick={() => handleKanjiClick(kanji)}>
-                  {kanji}
-                </Kanji>
-              ))}
-            </AllContainer>
-          ))}
-        </ContainerAllKanji>
+        <>
+          <ContainerAllKanji>
+            {kanjiRow.map((row, rowIndex) => (
+              <AllContainer key={rowIndex}>
+                {row.map((kanji, index) => (
+                  <Kanji key={index} onClick={() => handleKanjiClick(kanji)}>
+                    {kanji}
+                  </Kanji>
+                ))}
+              </AllContainer>
+            ))}
+          </ContainerAllKanji>
+          <PaginationContainer>
+            <PageNavButton
+              onClick={handlePrevPage}
+              disabled={currentPage === 1}
+            >
+              🢀
+            </PageNavButton>
+            <PageNavButton
+              onClick={handleNextPage}
+              disabled={currentPage === totalPages}
+            >
+              🢂
+            </PageNavButton>
+          </PaginationContainer>
+        </>
       )}
       <AllKanjiHeader>All available Kanji</AllKanjiHeader>
       <TextContainer>
@@ -76,10 +115,10 @@ const AllKanji = () => {
           Presented above is the comprehensive list of all available Kanji
           characters, encompassing an impressive total of 13,000. This extensive
           collection showcases the vast richness and complexity of the Kanji
-          script. However, please note that this list includes only the meanings
-          and stroke counts of the characters. Unlike the graded Kanji lists, it
-          does not provide associated words, grades, JLPT levels, or the kunyomi
-          and onyomi readings.
+          script. Please note that this list includes meanings, stroke counts,
+          associated words, grades, JLPT levels, and the kunyomi and onyomi
+          readings for <strong>some kanji</strong>, but not for all. The level
+          of detail varies across the characters.
         </AllKanjiText>
       </TextContainer>
     </Container>

@@ -15,7 +15,6 @@ const buttonStyles = css`
     background-color: #e4acad;
   }
 
-  /* Apply background color when active */
   &.active {
     background-color: #e4acad;
   }
