@@ -15,6 +15,11 @@ export const Container = styled.div`
   height: 200px;
   border-radius: 50%;
   overflow: hidden;
+
+  @media screen and (max-width: 1550px) {
+    width: 180px;
+    height: 180px;
+  }
 `;
 
 export const TextRingContainer = styled.div`
@@ -32,6 +37,10 @@ export const Text = styled.span`
   transform: translate(-50%, -50%);
   font-size: 28px;
   color: white;
+
+  @media screen and (max-width: 1550px) {
+    font-size: 22px;
+  }
 `;
 
 export const Character = styled.span`
@@ -41,4 +50,9 @@ export const Character = styled.span`
   transform-origin: center center;
   transform: translate(-50%, -50%) rotate(${(props) => props.rotation}deg)
     translateY(-${(props) => props.radius}px);
+
+  @media screen and (max-width: 1550px) {
+    transform: translate(-50%, -50%) rotate(${(props) => props.rotation}deg)
+      translateY(-${(props) => props.radius * 0.7}px);
+  }
 `;
