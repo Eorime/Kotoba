@@ -11,7 +11,7 @@ export const Container = styled.div`
   margin-top: 25px;
 
   @media screen and (max-width: 1550px) {
-    height: 1600px;
+    height: 1350px;
   }
 `;
 
@@ -87,6 +87,7 @@ export const AllKanjiTitle = styled.h6`
   @media screen and (max-width: 1550px) {
     font-size: 28px;
     right: 280px;
+    top: 450px;
   }
 `;
 
@@ -100,7 +101,7 @@ export const AllKanjiText = styled.p`
   @media screen and (max-width: 1550px) {
     font-size: 18px;
     right: 190px;
-    top: 600px;
+    top: 550px;
   }
 `;
 
@@ -114,7 +115,7 @@ export const AboutTitle = styled.h6`
   @media screen and (max-width: 1550px) {
     font-size: 28px;
     left: 170px;
-    top: 750px;
+    top: 700px;
   }
 
   &: hover {
@@ -132,7 +133,7 @@ export const AboutText = styled.p`
 
   @media screen and (max-width: 1550px) {
     font-size: 18px;
-    top: 850px;
+    top: 800px;
     left: 170px;
   }
 `;
@@ -187,7 +188,7 @@ export const AllRotationContainer = styled.div`
   right: 440px;
 
   @media screen and (max-width: 1550px) {
-    top: 490px;
+    top: 440px;
     right: 290px;
   }
 `;
@@ -198,7 +199,7 @@ export const AboutRotationContainer = styled.div`
   left: 180px;
 
   @media screen and (max-width: 1550px) {
-    top: 740px;
+    top: 690px;
     left: 70px;
   }
 `;

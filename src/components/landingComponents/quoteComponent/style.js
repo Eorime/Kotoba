@@ -18,6 +18,11 @@ export const Container = styled.div`
   background-color: #f1e7db;
   display: flex;
   justify-content: center;
+
+  @media screen and (max-width: 1550px) {
+    height: 600px;
+    margin-top: 1300px;
+  }
 `;
 
 export const QuoteWrapper = styled.div`
@@ -33,6 +38,10 @@ export const QuoteContainer = styled.div`
   align-self: center;
   margin-left: 15px;
   margin-top: 180px;
+
+  @media screen and (max-width: 1550px) {
+    margin-top: 150px;
+  }
 `;
 
 export const Quote = styled.h6`
@@ -40,6 +49,11 @@ export const Quote = styled.h6`
   font-size: 52px;
   margin-left: 70px;
   margin-right: 10px;
+
+  @media screen and (max-width: 1550px) {
+    font-size: 42px;
+    margin-top: 9%;
+  }
 `;
 
 export const Translation = styled.h3`
@@ -47,6 +61,10 @@ export const Translation = styled.h3`
   font-size: 36px;
   margin-left: 110px;
   margin-top: -60px;
+
+  @media screen and (max-width: 1550px) {
+    font-size: 26px;
+  }
 `;
 
 export const SpinContainer = styled.div`
@@ -61,10 +79,21 @@ export const SpinContainer = styled.div`
   display: flex;
   justify-content: center;
   animation: ${rotate} 8s linear infinite;
+
+  @media screen and (max-width: 1550px) {
+    width: 70px;
+    height: 70px;
+    top: 125px;
+    left: -18px;
+  }
 `;
 
 export const SpinText = styled.h6`
   font-size: 28px;
   color: #302e2c;
   align-self: center;
+
+  @media screen and (max-width: 1550px) {
+    font-size: 22px;
+  }
 `;
