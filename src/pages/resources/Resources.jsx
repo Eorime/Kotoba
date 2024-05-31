@@ -6,6 +6,7 @@ import {
   ResourceContainer,
   ResourceName,
   ResourceNameContainer,
+  ResourceText,
   ResourcesContainer,
   ResourcesTitle,
 } from "./style";
@@ -19,6 +20,12 @@ const Resources = () => {
       <ResourcesTitle>Resources for self-study 🌸</ResourcesTitle>
       <ResourcesContainer>
         <ResourceContainer>
+          <ResourceText>
+            学習教材 <br></br>
+            <br></br>
+            学習教材
+          </ResourceText>
+
           <ResourceNameContainer>
             <Link
               as="a"
@@ -31,6 +38,11 @@ const Resources = () => {
           </ResourceNameContainer>
         </ResourceContainer>
         <ResourceContainer>
+          <ResourceText>
+            学習教材 <br></br>
+            <br></br>
+            学習教材
+          </ResourceText>
           <ResourceNameContainer>
             <Link
               as="a"
@@ -43,6 +55,12 @@ const Resources = () => {
           </ResourceNameContainer>
         </ResourceContainer>
         <ResourceContainer>
+          <ResourceText>
+            学習教材 <br></br>
+            <br></br>
+            学習教材
+          </ResourceText>
+
           <ResourceNameContainer>
             <Link
               as="a"
@@ -55,6 +73,12 @@ const Resources = () => {
           </ResourceNameContainer>
         </ResourceContainer>
         <ResourceContainer>
+          <ResourceText>
+            学習教材 <br></br>
+            <br></br>
+            学習教材
+          </ResourceText>
+
           <ResourceNameContainer>
             <Link
               as="a"

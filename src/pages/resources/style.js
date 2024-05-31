@@ -80,3 +80,14 @@ export const ResourceName = styled.h1`
   @media screen and (max-width: 1550px) {
     font-size: 28px;
 `;
+
+export const ResourceText = styled.h1`
+  position: absolute;
+  color: #31a7a495;
+  margin-left: 4%;
+
+  @media screen and (max-width: 1550px) {
+    font-size: 28px;
+    margin-left: 3%;
+
+`;
