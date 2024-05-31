@@ -18,6 +18,12 @@ const buttonStyles = css`
   &.active {
     background-color: #e4acad;
   }
+
+  @media screen and (max-width: 1550px) {
+    font-size: 14px;
+    padding: 5px 8px;
+    border-radius: 12px;
+  }
 `;
 
 export const Container = styled.div``;
@@ -28,6 +34,11 @@ export const ButtonsContainer = styled.div`
   margin-top: 50px;
   margin-left: 15%;
   margin-bottom: 2%;
+
+  @media screen and (max-width: 1550px) {
+    margin-left: 17%;
+    margin-top: 40px;
+  }
 `;
 
 export const GradeContainer = styled.div``;
@@ -49,4 +60,7 @@ export const KANJI = styled.h1`
   color: #f8cfcf;
   font-size: 500px;
   z-index: -1;
+
+  @media screen and (max-width: 1550px) {
+    font-size: 300px;
 `;

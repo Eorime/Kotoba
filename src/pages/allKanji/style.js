@@ -39,6 +39,9 @@ export const KANJI = styled.h1`
   color: #f8cfcf;
   font-size: 500px;
   z-index: -1;
+
+  @media screen and (max-width: 1550px) {
+    font-size: 300px;
 `;
 
 export const AllKanjiHeader = styled.h1`

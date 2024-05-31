@@ -9,6 +9,9 @@ export const ABOUT = styled.h1`
   color: #f8cfcf;
   font-size: 400px;
   z-index: -1;
+
+  @media screen and (max-width: 1550px) {
+    font-size: 300px; q
 `;
 
 export const AboutTitle = styled.h1`

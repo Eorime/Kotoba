@@ -9,6 +9,9 @@ export const RESOURCES = styled.h1`
   color: #cbe0d5;
   font-size: 400px;
   z-index: -1;
+
+  @media screen and (max-width: 1550px) {
+    font-size: 300px;
 `;
 
 export const ResourcesTitle = styled.h1`

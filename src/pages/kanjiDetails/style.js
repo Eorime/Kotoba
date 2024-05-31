@@ -168,4 +168,7 @@ export const KOTOBA = styled.h1`
   color: #cbe0d5;
   font-size: 500px;
   z-index: -1;
+
+  @media screen and (max-width: 1550px) {
+    font-size: 300px;
 `;
