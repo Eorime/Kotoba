@@ -41,21 +41,32 @@ export const Text = styled.p`
     font-size: 18px; 
 `;
 
+export const GoalsWrapper = styled.div`
+  display: flex;
+  flex-direction: row;
+  border-radius: 12px;
+  margin-top: 1%;
+  justify-content: space-between;
+
+  @media screen and (max-width: 1550px) {
+  }
+`;
+
 export const ReasonsTextContainer = styled.div`
   margin-left: 13.5%;
-  margin-right: 50%;
+  width: 34%;
+  flex-shrink: 0;
   background-color: transparent;
   border: solid 2px #313131;
   padding-left: 20px;
   padding-right: 20px;
   border-radius: 12px;
-  margin-top: 1%;
 `;
 
 export const GoalTextContainer = styled.div`
   margin-right: 12%;
-  margin-left: 51%;
-  margin-top: -16.5%;
+  flex-shrink: 0;
+  width: 34%;
   background-color: transparent;
   border: solid 2px #313131;
   padding-left: 20px;
@@ -63,7 +74,6 @@ export const GoalTextContainer = styled.div`
   border-radius: 12px;
 
   @media screen and (max-width: 1550px) {
-    margin-top: -15.6%;
-
-    
+    width: 33%;
+  }
 `;

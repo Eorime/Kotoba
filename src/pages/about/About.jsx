@@ -7,6 +7,7 @@ import {
   TextContainer,
   ReasonsTextContainer,
   GoalTextContainer,
+  GoalsWrapper,
 } from "./style";
 import Navbar from "../../components/navbar/Navbar";
 import { Link } from "react-router-dom";
@@ -38,26 +39,29 @@ const About = () => {
           as its main data source to display all available kanji characters.
         </Text>
       </TextContainer>
-      <ReasonsTextContainer>
-        <Text>
-          My good understanding of the challenges and joys of language learning
-          drove me to craft this website as a thoughtfully designed and
-          user-friendly experience. I wanted to go beyond just listing kanji - I
-          aimed to create a comprehensive resource that makes learning
-          enjoyable, offering study materials and insights into one of the
-          Japanese writing systems.
-        </Text>
-      </ReasonsTextContainer>
-      <GoalTextContainer>
-        <Text>
-          After creating KOTOBA, my aim is to develop a website that will offer
-          interactive tools for learning multiple languages. This site will be
-          in Georgian, since most language learning sites are English-based. My
-          goal is to provide the Georgian-speaking community with a space to
-          learn languages. It's a vision I'm passionate about, and I look
-          forward to bringing it to life.
-        </Text>
-      </GoalTextContainer>
+      <GoalsWrapper>
+        <ReasonsTextContainer>
+          <Text>
+            My good understanding of the challenges and joys of language
+            learning drove me to craft this website as a thoughtfully designed
+            and user-friendly experience. I wanted to go beyond just listing
+            kanji - I aimed to create a comprehensive resource that makes
+            learning enjoyable, offering study materials and insights into one
+            of the Japanese writing systems.
+          </Text>
+        </ReasonsTextContainer>
+        <GoalTextContainer>
+          <Text>
+            After creating KOTOBA, my aim is to develop a website that will
+            offer interactive tools for learning multiple languages. This site
+            will be in Georgian, since most language learning sites are
+            English-based. My goal is to provide the Georgian-speaking community
+            with a space to learn languages. It's a vision I'm passionate about,
+            and I look forward to bringing it to life.
+          </Text>
+        </GoalTextContainer>
+      </GoalsWrapper>
+
       <ABOUT>について</ABOUT>
     </Container>
   );
