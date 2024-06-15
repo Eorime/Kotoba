@@ -18,6 +18,7 @@ export const ContainerAllKanji = styled.div`
 export const AllContainer = styled.div`
   display: flex;
   flex-direction: row;
+  flex-wrap: wrap;
   font-size: 20px;
   margin-left: 1%;
   margin-bottom: 2.5%;

@@ -13,6 +13,8 @@ export const AllGradeContainer = styled.div`
 export const GradeContainer = styled.div`
   display: flex;
   flex-direction: row;
+    flex-wrap: wrap;
+
   margin-top: 2%;
   margin-left: 1%;
   margin-bottom: 4%;

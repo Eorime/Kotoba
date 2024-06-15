@@ -13,6 +13,7 @@ export const AllJinmeyoContainer = styled.div`
 export const JinmeyoContainer = styled.div`
   display: flex;
   flex-direction: row;
+  flex-wrap: wrap;
   margin-top: 2%;
   margin-left: 1%;
   margin-bottom: 4%;
