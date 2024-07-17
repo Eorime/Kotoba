@@ -19,7 +19,7 @@ const buttonStyles = css`
     background-color: #e4acad;
   }
 
-  @media screen and (max-width: 1550px) {
+  @media screen and (max-width: 1700px) {
     font-size: 14px;
     padding: 5px 8px;
     border-radius: 12px;
@@ -35,7 +35,7 @@ export const ButtonsContainer = styled.div`
   margin-left: 15%;
   margin-bottom: 2%;
 
-  @media screen and (max-width: 1550px) {
+  @media screen and (max-width: 1700px) {
     margin-left: 17%;
     margin-top: 40px;
   }
@@ -61,6 +61,6 @@ export const KANJI = styled.h1`
   font-size: 500px;
   z-index: -1;
 
-  @media screen and (max-width: 1550px) {
+  @media screen and (max-width: 1700px) {
     font-size: 300px;
 `;

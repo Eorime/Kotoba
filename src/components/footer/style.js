@@ -11,7 +11,7 @@ export const Container = styled.div`
   display: flex;
   flex-direction: row;
 
-  @media screen and (max-width: 1550px) {
+  @media screen and (max-width: 1700px) {
     top: 410vh;
     height: 260px;
   }
@@ -22,7 +22,7 @@ export const ContentsTitle = styled.p`
   color: white;
   margin-bottom: 5px;
 
-  @media screen and (max-width: 1550px) {
+  @media screen and (max-width: 1700px) {
     font-size: 18px;
     margin-bottom: -5px;
   }
@@ -33,7 +33,7 @@ export const ContentsContainer = styled.div`
   flex-direction: column;
   padding-left: 15vw;
 
-  @media screen and (max-width: 1550px) {
+  @media screen and (max-width: 1700px) {
     padding-left: 13vw;
   }
 `;
@@ -43,7 +43,7 @@ export const ContentLink = styled(Link)`
   color: white;
   margin-top: 20px;
 
-  @media screen and (max-width: 1550px) {
+  @media screen and (max-width: 1700px) {
     font-size: 14px;
   }
 `;
@@ -59,7 +59,7 @@ export const ResourcesTitle = styled.p`
   color: white;
   margin-bottom: 5px;
 
-  @media screen and (max-width: 1550px) {
+  @media screen and (max-width: 1700px) {
     font-size: 18px;
     margin-bottom: -5px;
   }
@@ -74,7 +74,7 @@ export const ResourceLink = styled.a`
     cursor: pointer;
   }
 
-  @media screen and (max-width: 1550px) {
+  @media screen and (max-width: 1700px) {
     font-size: 14px;
   }
 `;
@@ -90,7 +90,7 @@ export const ContactTitle = styled.p`
   color: white;
   margin-bottom: 5px;
 
-  @media screen and (max-width: 1550px) {
+  @media screen and (max-width: 1700px) {
     font-size: 18px;
     margin-bottom: -5px;
   }
@@ -101,7 +101,7 @@ export const ContactLink = styled(Link)`
   color: white;
   margin-top: 20px;
 
-  @media screen and (max-width: 1550px) {
+  @media screen and (max-width: 1700px) {
     font-size: 14px;
   }
 `;
@@ -111,7 +111,7 @@ export const GithubLogo = styled.img`
   margin-top: 2%;
   margin-left: 1%;
 
-  @media screen and (max-width: 1550px) {
+  @media screen and (max-width: 1700px) {
     width: 30px;
     margin-top: 1%;
   }

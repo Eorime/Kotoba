@@ -16,7 +16,7 @@ export const Container = styled.div`
   border-radius: 50%;
   overflow: hidden;
 
-  @media screen and (max-width: 1550px) {
+  @media screen and (max-width: 1700px) {
     width: 180px;
     height: 180px;
   }
@@ -38,7 +38,7 @@ export const Text = styled.span`
   font-size: 28px;
   color: white;
 
-  @media screen and (max-width: 1550px) {
+  @media screen and (max-width: 1700px) {
     font-size: 22px;
   }
 `;
@@ -51,7 +51,7 @@ export const Character = styled.span`
   transform: translate(-50%, -50%) rotate(${(props) => props.rotation}deg)
     translateY(-${(props) => props.radius}px);
 
-  @media screen and (max-width: 1550px) {
+  @media screen and (max-width: 1700px) {
     transform: translate(-50%, -50%) rotate(${(props) => props.rotation}deg)
       translateY(-${(props) => props.radius * 0.7}px);
   }

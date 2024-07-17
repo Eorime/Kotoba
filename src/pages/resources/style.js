@@ -10,7 +10,7 @@ export const RESOURCES = styled.h1`
   font-size: 400px;
   z-index: -1;
 
-  @media screen and (max-width: 1550px) {
+  @media screen and (max-width: 1700px) {
     font-size: 300px;
     top: 28%;
 `;
@@ -21,7 +21,7 @@ export const ResourcesTitle = styled.h1`
   margin-top: 3%;
   font-size: 50px;
 
-  @media screen and (max-width: 1550px) {
+  @media screen and (max-width: 1700px) {
     font-size: 35px; 
 `;
 
@@ -34,7 +34,7 @@ export const ResourcesContainer = styled.div`
   margin-bottom: 130px;
   margin-top: 4%;
 
-  @media screen and (max-width: 1550px) {
+  @media screen and (max-width: 1700px) {
     margin-left: 6%;
 `;
 
@@ -48,7 +48,7 @@ export const ResourceContainer = styled.div`
   width: 350px;
   height: 400px;
 
-  @media screen and (max-width: 1550px) {
+  @media screen and (max-width: 1700px) {
     width: 200px;
   height: 250px;
 `;
@@ -65,7 +65,7 @@ export const ResourceNameContainer = styled.div`
     cursor: pointer;
   }
 
-  @media screen and (max-width: 1550px) {
+  @media screen and (max-width: 1700px) {
   margin-top: 90%;
 `;
 
@@ -77,7 +77,7 @@ export const ResourceName = styled.h1`
     color: #31a7a4;
   }
 
-  @media screen and (max-width: 1550px) {
+  @media screen and (max-width: 1700px) {
     font-size: 28px;
 `;
 
@@ -86,7 +86,7 @@ export const ResourceText = styled.h1`
   color: #31a7a495;
   margin-left: 4%;
 
-  @media screen and (max-width: 1550px) {
+  @media screen and (max-width: 1700px) {
     font-size: 28px;
     margin-left: 3%;
 

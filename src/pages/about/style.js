@@ -10,7 +10,7 @@ export const ABOUT = styled.h1`
   font-size: 400px;
   z-index: -1;
 
-  @media screen and (max-width: 1550px) {
+  @media screen and (max-width: 1700px) {
     font-size: 300px; 
 `;
 
@@ -20,7 +20,7 @@ export const AboutTitle = styled.h1`
   margin-top: 3%;
   font-size: 50px;
 
-  @media screen and (max-width: 1550px) {
+  @media screen and (max-width: 1700px) {
     font-size: 35px; 
 `;
 
@@ -37,7 +37,7 @@ export const TextContainer = styled.div`
 export const Text = styled.p`
   font-size: 28px;
 
-  @media screen and (max-width: 1550px) {
+  @media screen and (max-width: 1700px) {
     font-size: 18px; 
 `;
 
@@ -48,7 +48,7 @@ export const GoalsWrapper = styled.div`
   margin-top: 1%;
   justify-content: space-between;
 
-  @media screen and (max-width: 1550px) {
+  @media screen and (max-width: 1700px) {
   }
 `;
 
@@ -73,7 +73,7 @@ export const GoalTextContainer = styled.div`
   padding-right: 20px;
   border-radius: 12px;
 
-  @media screen and (max-width: 1550px) {
+  @media screen and (max-width: 1700px) {
     width: 33%;
   }
 `;

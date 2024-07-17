@@ -25,7 +25,7 @@ export const NavElement = styled.p`
     color: #d7717f;
   }
 
-  @media screen and (max-width: 1550px) {
+  @media screen and (max-width: 1700px) {
     font-size: 16px;
   }
 `;
@@ -36,7 +36,7 @@ export const NavLogo = styled.h1`
   letter-spacing: 4px;
   color: rgba(0, 0, 0, 0.8);
 
-  @media screen and (max-width: 1550px) {
+  @media screen and (max-width: 1700px) {
     font-size: 20px;
     line-height: 20px;
     letter-spacing: 2px;

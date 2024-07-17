@@ -10,7 +10,7 @@ export const ContainerAllKanji = styled.div`
   padding: 20px;
   margin-top: 65px;
 
-  @media screen and (max-width: 1550px) {
+  @media screen and (max-width: 1700px) {
     margin-top: 35px;
   }
 `;
@@ -24,7 +24,7 @@ export const AllContainer = styled.div`
   margin-bottom: 2.5%;
   margin-top: 2.5%;
 
-  @media screen and (max-width: 1550px) {
+  @media screen and (max-width: 1700px) {
     margin-top: 0.5%;
     margin-bottom: 2%;
 `;
@@ -40,7 +40,7 @@ export const Kanji = styled.div`
     color: #d7717f;
   }
 
-  @media screen and (max-width: 1550px) {
+  @media screen and (max-width: 1700px) {
     font-size: 35px;
     margin-right: 12px;
 `;
@@ -53,7 +53,7 @@ export const KANJI = styled.h1`
   font-size: 500px;
   z-index: -1;
 
-  @media screen and (max-width: 1550px) {
+  @media screen and (max-width: 1700px) {
     font-size: 300px;
 `;
 
@@ -63,7 +63,7 @@ export const AllKanjiHeader = styled.h1`
   margin-left: 13%;
   margin-top: 7%;
 
-  @media screen and (max-width: 1550px) {
+  @media screen and (max-width: 1700px) {
     font-size: 35px;
 `;
 
@@ -76,7 +76,7 @@ export const TextContainer = styled.div`
 export const AllKanjiText = styled.p`
   font-size: 28px;
 
-  @media screen and (max-width: 1550px) {
+  @media screen and (max-width: 1700px) {
     font-size: 20px;
 `;
 
@@ -102,7 +102,7 @@ export const PageNavButton = styled.button`
     cursor: pointer;
   }
 
-  @media screen and (max-width: 1550px) {
+  @media screen and (max-width: 1700px) {
     font-size: 35px;
   }
 `;

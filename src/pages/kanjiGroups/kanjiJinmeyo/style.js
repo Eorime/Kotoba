@@ -18,7 +18,7 @@ export const JinmeyoContainer = styled.div`
   margin-left: 1%;
   margin-bottom: 4%;
 
-  @media screen and (max-width: 1550px) {
+  @media screen and (max-width: 1700px) {
     margin-top: 0.5%;
     margin-bottom: 2%;
 `;
@@ -34,7 +34,7 @@ export const Kanji = styled.div`
     color: #d7717f;
   }
 
-  @media screen and (max-width: 1550px) {
+  @media screen and (max-width: 1700px) {
     font-size: 35px;
     margin-right: 12px;
 `;
@@ -46,7 +46,7 @@ export const JinmeyoTitle = styled.h1`
   margin-top: 7%;
 
   
-  @media screen and (max-width: 1550px) {
+  @media screen and (max-width: 1700px) {
     font-size: 35px;
 `;
 
@@ -59,7 +59,7 @@ export const TextContainer = styled.div`
 export const JinmeyoText = styled.p`
   font-size: 28px;
 
-  @media screen and (max-width: 1550px) {
+  @media screen and (max-width: 1700px) {
     font-size: 20px;
   `;
 
@@ -85,7 +85,7 @@ export const PageNavButton = styled.button`
     cursor: pointer;
   }
 
-  @media screen and (max-width: 1550px) {
+  @media screen and (max-width: 1700px) {
     font-size: 35px;
   }
 `;

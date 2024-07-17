@@ -10,7 +10,7 @@ export const Container = styled.div`
   height: 1900px;
   margin-top: 25px;
 
-  @media screen and (max-width: 1550px) {
+  @media screen and (max-width: 1700px) {
     height: 1350px;
   }
 `;
@@ -31,7 +31,7 @@ export const MainText = styled.h1`
   -webkit-text-stroke-color: white;
   line-height: 300px;
 
-  @media screen and (max-width: 1550px) {
+  @media screen and (max-width: 1700px) {
     font-size: 120px;
     left: 45vw;
     margin-top: 50px;
@@ -51,7 +51,7 @@ export const AllGradeTitle = styled.h6`
     cursor: pointer;
   }
 
-  @media screen and (max-width: 1550px) {
+  @media screen and (max-width: 1700px) {
     font-size: 28px;
     top: 200px;
     left: 170px;
@@ -65,7 +65,7 @@ export const AllGradeText = styled.p`
   left: 290px;
   font-size: 26px;
 
-  @media screen and (max-width: 1550px) {
+  @media screen and (max-width: 1700px) {
     font-size: 20px;
     top: 300px;
     left: 170px;
@@ -84,7 +84,7 @@ export const AllKanjiTitle = styled.h6`
     cursor: pointer;
   }
 
-  @media screen and (max-width: 1550px) {
+  @media screen and (max-width: 1700px) {
     font-size: 28px;
     right: 280px;
     top: 450px;
@@ -98,7 +98,7 @@ export const AllKanjiText = styled.p`
   right: 255px;
   font-size: 26px;
 
-  @media screen and (max-width: 1550px) {
+  @media screen and (max-width: 1700px) {
     font-size: 18px;
     right: 190px;
     top: 550px;
@@ -112,7 +112,7 @@ export const AboutTitle = styled.h6`
   top: 850px;
   left: 290px;
 
-  @media screen and (max-width: 1550px) {
+  @media screen and (max-width: 1700px) {
     font-size: 28px;
     left: 170px;
     top: 700px;
@@ -131,7 +131,7 @@ export const AboutText = styled.p`
   left: 290px;
   font-size: 26px;
 
-  @media screen and (max-width: 1550px) {
+  @media screen and (max-width: 1700px) {
     font-size: 18px;
     top: 800px;
     left: 170px;
@@ -150,7 +150,7 @@ export const ResourcesTitle = styled.h6`
     cursor: pointer;
   }
 
-  @media screen and (max-width: 1550px) {
+  @media screen and (max-width: 1700px) {
     font-size: 28px;
     right: 260px;
     top: 950px;
@@ -164,7 +164,7 @@ export const ResourcesText = styled.p`
   right: 210px;
   font-size: 26px;
 
-  @media screen and (max-width: 1550px) {
+  @media screen and (max-width: 1700px) {
     font-size: 18px;
     right: 150px;
     top: 1050px;
@@ -176,7 +176,7 @@ export const GradeRotationContainer = styled.div`
   top: 265px;
   left: 180px;
 
-  @media screen and (max-width: 1550px) {
+  @media screen and (max-width: 1700px) {
     top: 190px;
     left: 70px;
   }
@@ -187,7 +187,7 @@ export const AllRotationContainer = styled.div`
   top: 510px;
   right: 440px;
 
-  @media screen and (max-width: 1550px) {
+  @media screen and (max-width: 1700px) {
     top: 440px;
     right: 290px;
   }
@@ -198,7 +198,7 @@ export const AboutRotationContainer = styled.div`
   top: 860px;
   left: 180px;
 
-  @media screen and (max-width: 1550px) {
+  @media screen and (max-width: 1700px) {
     top: 690px;
     left: 70px;
   }
@@ -209,7 +209,7 @@ export const ResourcesRotationContainer = styled.div`
   top: 1210px;
   right: 450px;
 
-  @media screen and (max-width: 1550px) {
+  @media screen and (max-width: 1700px) {
     right: 285px;
     top: 940px;
   }
