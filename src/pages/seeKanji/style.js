@@ -36,7 +36,7 @@ export const ButtonsContainer = styled.div`
   margin-bottom: 2%;
 
   @media screen and (max-width: 1700px) {
-    margin-left: 17%;
+    margin-left: 23%;
     margin-top: 40px;
   }
 `;
@@ -62,5 +62,6 @@ export const KANJI = styled.h1`
   z-index: -1;
 
   @media screen and (max-width: 1700px) {
+  top: 30%;
     font-size: 300px;
 `;

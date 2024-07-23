@@ -13,7 +13,7 @@ export const AllGradeContainer = styled.div`
 export const GradeContainer = styled.div`
   display: flex;
   flex-direction: row;
-    flex-wrap: wrap;
+  flex-wrap: wrap;
 
   margin-top: 2%;
   margin-left: 1%;
@@ -22,6 +22,7 @@ export const GradeContainer = styled.div`
   @media screen and (max-width: 1700px) {
     margin-top: 0.5%;
     margin-bottom: 2%;
+    padding-left: 80px;
 `;
 
 export const GradeKanji = styled.div`
@@ -36,7 +37,7 @@ export const GradeKanji = styled.div`
   }
 
   @media screen and (max-width: 1700px) {
-    font-size: 35px;
+    font-size: 40px;
     margin-right: 12px;
 `;
 

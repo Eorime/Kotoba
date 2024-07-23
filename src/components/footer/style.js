@@ -12,7 +12,7 @@ export const Container = styled.div`
   flex-direction: row;
 
   @media screen and (max-width: 1700px) {
-    top: 410vh;
+    top: 250vh;
     height: 260px;
   }
 `;
